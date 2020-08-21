@@ -1,700 +1,941 @@
 <!doctype html>
-<html lang="ru">             
+<html lang="ru">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="keywords" content="">
-  <meta name="description" content="">
-	<title>Open Art my</title>
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/slick.css">
-	<link rel="stylesheet" href="css/slick-theme.css">
-	<link media="all" rel="stylesheet" href="css/modal-window.css" />
-	<link rel="stylesheet" href="css/modal-bootstrap.css">
-	<link rel="stylesheet" href="css/jquery.arcticmodal-0.3.css">
-	<link rel="stylesheet" href="css/simple.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>Open Art</title>
+	<!-- <link rel="stylesheet" href="css/normalize.css"> -->
+	<!-- <link rel="stylesheet" href="css/slick.css"> -->
+	<!-- <link rel="stylesheet" href="css/slick-theme.css"> -->
+	<!-- <link rel="stylesheet" href="css/jquery.arcticmodal-0.3.css"> -->
+	<!-- <link rel="stylesheet" href="css/simple.css"> -->
 	<link rel="stylesheet" href="css/dialog.css">
-	<link rel="stylesheet" href="css/custom-bootstrap.min.css">
-	<link rel="stylesheet" href="css/owl.carousel.css">
-	<link rel="stylesheet" href="css/owl.theme.default.css">
-	<link rel="stylesheet" href="css/swiper.min.css">
-	
-	<link rel="stylesheet" href="css/style.css" >
+	<link rel="stylesheet" href="css/custom-bootstrap.css">
+	<!-- <link rel="stylesheet" href="css/swiper.min.css"> -->
+	<link rel="stylesheet" href="css/swiper.css">
+	<!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
+
+	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <!--[if lt IE 9]>
+	<!--[if lt IE 9]>
 	<p class="browsehappy container">Вы используете <strong>устаревший</strong> браузер. Пожалуйста, <a href="http://browsehappy.com/">обновите версию вашего браузера</a> для более
 	продуктивной и комфортной работы.</p>  <![endif]-->
 
-<!-- svg inline -->	
-<svg  style="display: none;" xmlns="http://www.w3.org/2000/svg">
+	<!-- svg inline -->
+	<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
 
-<symbol id="icon-facebook" viewBox="0 0 16 28">
-<title>facebook</title>
-<path d="M14.984 0.187v4.125h-2.453c-1.922 0-2.281 0.922-2.281 2.25v2.953h4.578l-0.609 4.625h-3.969v11.859h-4.781v-11.859h-3.984v-4.625h3.984v-3.406c0-3.953 2.422-6.109 5.953-6.109 1.687 0 3.141 0.125 3.563 0.187z"></path>
-</symbol>
-<symbol id="icon-youtube" viewBox="0 0 24 28">
-<title>youtube</title>
-<path d="M14.359 20.359v-2.453c0-0.516-0.156-0.781-0.453-0.781-0.172 0-0.344 0.078-0.516 0.25v3.5c0.172 0.172 0.344 0.25 0.516 0.25 0.297 0 0.453-0.25 0.453-0.766zM17.234 18.453h1.031v-0.531c0-0.531-0.172-0.797-0.516-0.797s-0.516 0.266-0.516 0.797v0.531zM8.313 14.297v1.094h-1.25v6.609h-1.156v-6.609h-1.219v-1.094h3.625zM11.453 16.266v5.734h-1.047v-0.625c-0.406 0.469-0.797 0.703-1.188 0.703-0.328 0-0.562-0.141-0.656-0.438-0.063-0.172-0.094-0.438-0.094-0.844v-4.531h1.031v4.219c0 0.234 0 0.375 0.016 0.406 0.016 0.156 0.094 0.234 0.234 0.234 0.219 0 0.422-0.156 0.656-0.484v-4.375h1.047zM15.391 18v2.281c0 0.516-0.031 0.906-0.109 1.141-0.125 0.438-0.406 0.656-0.828 0.656-0.359 0-0.719-0.219-1.062-0.641v0.562h-1.047v-7.703h1.047v2.516c0.328-0.406 0.688-0.625 1.062-0.625 0.422 0 0.703 0.219 0.828 0.656 0.078 0.234 0.109 0.609 0.109 1.156zM19.313 20.016v0.141c0 0.344-0.016 0.562-0.031 0.672-0.031 0.234-0.109 0.438-0.234 0.625-0.281 0.422-0.719 0.625-1.25 0.625-0.547 0-0.969-0.203-1.266-0.594-0.219-0.281-0.328-0.734-0.328-1.344v-2.016c0-0.609 0.094-1.047 0.313-1.344 0.297-0.391 0.719-0.594 1.25-0.594 0.516 0 0.938 0.203 1.219 0.594 0.219 0.297 0.328 0.734 0.328 1.344v1.188h-2.078v1.016c0 0.531 0.172 0.797 0.531 0.797 0.25 0 0.406-0.141 0.469-0.406 0-0.063 0.016-0.297 0.016-0.703h1.062zM12.266 7.141v2.438c0 0.531-0.172 0.797-0.5 0.797-0.344 0-0.5-0.266-0.5-0.797v-2.438c0-0.531 0.156-0.812 0.5-0.812 0.328 0 0.5 0.281 0.5 0.812zM20.594 18.281v0c0-1.344 0-2.766-0.297-4.062-0.219-0.922-0.969-1.594-1.859-1.687-2.125-0.234-4.281-0.234-6.438-0.234-2.141 0-4.297 0-6.422 0.234-0.906 0.094-1.656 0.766-1.859 1.687-0.297 1.297-0.313 2.719-0.313 4.062v0c0 1.328 0 2.75 0.313 4.062 0.203 0.906 0.953 1.578 1.844 1.687 2.141 0.234 4.297 0.234 6.438 0.234s4.297 0 6.438-0.234c0.891-0.109 1.641-0.781 1.844-1.687 0.313-1.313 0.313-2.734 0.313-4.062zM8.797 8.109l1.406-4.625h-1.172l-0.797 3.047-0.828-3.047h-1.219c0.234 0.719 0.5 1.437 0.734 2.156 0.375 1.094 0.609 1.906 0.719 2.469v3.141h1.156v-3.141zM13.312 9.375v-2.031c0-0.609-0.109-1.062-0.328-1.359-0.297-0.391-0.703-0.594-1.219-0.594-0.531 0-0.938 0.203-1.219 0.594-0.219 0.297-0.328 0.75-0.328 1.359v2.031c0 0.609 0.109 1.062 0.328 1.359 0.281 0.391 0.688 0.594 1.219 0.594 0.516 0 0.922-0.203 1.219-0.594 0.219-0.281 0.328-0.75 0.328-1.359zM16.141 11.25h1.047v-5.781h-1.047v4.422c-0.234 0.328-0.453 0.484-0.656 0.484-0.141 0-0.234-0.078-0.25-0.25-0.016-0.031-0.016-0.156-0.016-0.406v-4.25h-1.047v4.578c0 0.406 0.031 0.672 0.094 0.859 0.109 0.281 0.344 0.422 0.672 0.422 0.391 0 0.781-0.234 1.203-0.703v0.625zM24 6.5v15c0 2.484-2.016 4.5-4.5 4.5h-15c-2.484 0-4.5-2.016-4.5-4.5v-15c0-2.484 2.016-4.5 4.5-4.5h15c2.484 0 4.5 2.016 4.5 4.5z"></path>
-</symbol>
-<symbol id="icon-instagram" viewBox="0 0 24 28">
-<title>instagram</title>
-<path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zM18.156 14c0 3.406-2.75 6.156-6.156 6.156s-6.156-2.75-6.156-6.156 2.75-6.156 6.156-6.156 6.156 2.75 6.156 6.156zM19.844 7.594c0 0.797-0.641 1.437-1.437 1.437s-1.437-0.641-1.437-1.437 0.641-1.437 1.437-1.437 1.437 0.641 1.437 1.437zM12 4.156c-1.75 0-5.5-0.141-7.078 0.484-0.547 0.219-0.953 0.484-1.375 0.906s-0.688 0.828-0.906 1.375c-0.625 1.578-0.484 5.328-0.484 7.078s-0.141 5.5 0.484 7.078c0.219 0.547 0.484 0.953 0.906 1.375s0.828 0.688 1.375 0.906c1.578 0.625 5.328 0.484 7.078 0.484s5.5 0.141 7.078-0.484c0.547-0.219 0.953-0.484 1.375-0.906s0.688-0.828 0.906-1.375c0.625-1.578 0.484-5.328 0.484-7.078s0.141-5.5-0.484-7.078c-0.219-0.547-0.484-0.953-0.906-1.375s-0.828-0.688-1.375-0.906c-1.578-0.625-5.328-0.484-7.078-0.484zM24 14c0 1.656 0.016 3.297-0.078 4.953-0.094 1.922-0.531 3.625-1.937 5.031s-3.109 1.844-5.031 1.937c-1.656 0.094-3.297 0.078-4.953 0.078s-3.297 0.016-4.953-0.078c-1.922-0.094-3.625-0.531-5.031-1.937s-1.844-3.109-1.937-5.031c-0.094-1.656-0.078-3.297-0.078-4.953s-0.016-3.297 0.078-4.953c0.094-1.922 0.531-3.625 1.937-5.031s3.109-1.844 5.031-1.937c1.656-0.094 3.297-0.078 4.953-0.078s3.297-0.016 4.953 0.078c1.922 0.094 3.625 0.531 5.031 1.937s1.844 3.109 1.937 5.031c0.094 1.656 0.078 3.297 0.078 4.953z"></path>
-</symbol>
-<symbol id="icon-vk" viewBox="0 0 31 28">
-<title>vkontakte</title>
-<path d="M29.953 8.125c0.234 0.641-0.5 2.141-2.344 4.594-3.031 4.031-3.359 3.656-0.859 5.984 2.406 2.234 2.906 3.313 2.984 3.453 0 0 1 1.75-1.109 1.766l-4 0.063c-0.859 0.172-2-0.609-2-0.609-1.5-1.031-2.906-3.703-4-3.359 0 0-1.125 0.359-1.094 2.766 0.016 0.516-0.234 0.797-0.234 0.797s-0.281 0.297-0.828 0.344h-1.797c-3.953 0.25-7.438-3.391-7.438-3.391s-3.813-3.938-7.156-11.797c-0.219-0.516 0.016-0.766 0.016-0.766s0.234-0.297 0.891-0.297l4.281-0.031c0.406 0.063 0.688 0.281 0.688 0.281s0.25 0.172 0.375 0.5c0.703 1.75 1.609 3.344 1.609 3.344 1.563 3.219 2.625 3.766 3.234 3.437 0 0 0.797-0.484 0.625-4.375-0.063-1.406-0.453-2.047-0.453-2.047-0.359-0.484-1.031-0.625-1.328-0.672-0.234-0.031 0.156-0.594 0.672-0.844 0.766-0.375 2.125-0.391 3.734-0.375 1.266 0.016 1.625 0.094 2.109 0.203 1.484 0.359 0.984 1.734 0.984 5.047 0 1.062-0.203 2.547 0.562 3.031 0.328 0.219 1.141 0.031 3.141-3.375 0 0 0.938-1.625 1.672-3.516 0.125-0.344 0.391-0.484 0.391-0.484s0.25-0.141 0.594-0.094l4.5-0.031c1.359-0.172 1.578 0.453 1.578 0.453z"></path>
-</symbol>
+		<symbol id="icon-facebook" viewBox="0 0 16 28">
+			<title>facebook</title>
+			<path
+				d="M14.984 0.187v4.125h-2.453c-1.922 0-2.281 0.922-2.281 2.25v2.953h4.578l-0.609 4.625h-3.969v11.859h-4.781v-11.859h-3.984v-4.625h3.984v-3.406c0-3.953 2.422-6.109 5.953-6.109 1.687 0 3.141 0.125 3.563 0.187z">
+			</path>
+		</symbol>
+		<symbol id="icon-youtube" viewBox="0 0 24 28">
+			<title>youtube</title>
+			<path
+				d="M14.359 20.359v-2.453c0-0.516-0.156-0.781-0.453-0.781-0.172 0-0.344 0.078-0.516 0.25v3.5c0.172 0.172 0.344 0.25 0.516 0.25 0.297 0 0.453-0.25 0.453-0.766zM17.234 18.453h1.031v-0.531c0-0.531-0.172-0.797-0.516-0.797s-0.516 0.266-0.516 0.797v0.531zM8.313 14.297v1.094h-1.25v6.609h-1.156v-6.609h-1.219v-1.094h3.625zM11.453 16.266v5.734h-1.047v-0.625c-0.406 0.469-0.797 0.703-1.188 0.703-0.328 0-0.562-0.141-0.656-0.438-0.063-0.172-0.094-0.438-0.094-0.844v-4.531h1.031v4.219c0 0.234 0 0.375 0.016 0.406 0.016 0.156 0.094 0.234 0.234 0.234 0.219 0 0.422-0.156 0.656-0.484v-4.375h1.047zM15.391 18v2.281c0 0.516-0.031 0.906-0.109 1.141-0.125 0.438-0.406 0.656-0.828 0.656-0.359 0-0.719-0.219-1.062-0.641v0.562h-1.047v-7.703h1.047v2.516c0.328-0.406 0.688-0.625 1.062-0.625 0.422 0 0.703 0.219 0.828 0.656 0.078 0.234 0.109 0.609 0.109 1.156zM19.313 20.016v0.141c0 0.344-0.016 0.562-0.031 0.672-0.031 0.234-0.109 0.438-0.234 0.625-0.281 0.422-0.719 0.625-1.25 0.625-0.547 0-0.969-0.203-1.266-0.594-0.219-0.281-0.328-0.734-0.328-1.344v-2.016c0-0.609 0.094-1.047 0.313-1.344 0.297-0.391 0.719-0.594 1.25-0.594 0.516 0 0.938 0.203 1.219 0.594 0.219 0.297 0.328 0.734 0.328 1.344v1.188h-2.078v1.016c0 0.531 0.172 0.797 0.531 0.797 0.25 0 0.406-0.141 0.469-0.406 0-0.063 0.016-0.297 0.016-0.703h1.062zM12.266 7.141v2.438c0 0.531-0.172 0.797-0.5 0.797-0.344 0-0.5-0.266-0.5-0.797v-2.438c0-0.531 0.156-0.812 0.5-0.812 0.328 0 0.5 0.281 0.5 0.812zM20.594 18.281v0c0-1.344 0-2.766-0.297-4.062-0.219-0.922-0.969-1.594-1.859-1.687-2.125-0.234-4.281-0.234-6.438-0.234-2.141 0-4.297 0-6.422 0.234-0.906 0.094-1.656 0.766-1.859 1.687-0.297 1.297-0.313 2.719-0.313 4.062v0c0 1.328 0 2.75 0.313 4.062 0.203 0.906 0.953 1.578 1.844 1.687 2.141 0.234 4.297 0.234 6.438 0.234s4.297 0 6.438-0.234c0.891-0.109 1.641-0.781 1.844-1.687 0.313-1.313 0.313-2.734 0.313-4.062zM8.797 8.109l1.406-4.625h-1.172l-0.797 3.047-0.828-3.047h-1.219c0.234 0.719 0.5 1.437 0.734 2.156 0.375 1.094 0.609 1.906 0.719 2.469v3.141h1.156v-3.141zM13.312 9.375v-2.031c0-0.609-0.109-1.062-0.328-1.359-0.297-0.391-0.703-0.594-1.219-0.594-0.531 0-0.938 0.203-1.219 0.594-0.219 0.297-0.328 0.75-0.328 1.359v2.031c0 0.609 0.109 1.062 0.328 1.359 0.281 0.391 0.688 0.594 1.219 0.594 0.516 0 0.922-0.203 1.219-0.594 0.219-0.281 0.328-0.75 0.328-1.359zM16.141 11.25h1.047v-5.781h-1.047v4.422c-0.234 0.328-0.453 0.484-0.656 0.484-0.141 0-0.234-0.078-0.25-0.25-0.016-0.031-0.016-0.156-0.016-0.406v-4.25h-1.047v4.578c0 0.406 0.031 0.672 0.094 0.859 0.109 0.281 0.344 0.422 0.672 0.422 0.391 0 0.781-0.234 1.203-0.703v0.625zM24 6.5v15c0 2.484-2.016 4.5-4.5 4.5h-15c-2.484 0-4.5-2.016-4.5-4.5v-15c0-2.484 2.016-4.5 4.5-4.5h15c2.484 0 4.5 2.016 4.5 4.5z">
+			</path>
+		</symbol>
+		<symbol id="icon-instagram" viewBox="0 0 24 28">
+			<title>instagram</title>
+			<path
+				d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zM18.156 14c0 3.406-2.75 6.156-6.156 6.156s-6.156-2.75-6.156-6.156 2.75-6.156 6.156-6.156 6.156 2.75 6.156 6.156zM19.844 7.594c0 0.797-0.641 1.437-1.437 1.437s-1.437-0.641-1.437-1.437 0.641-1.437 1.437-1.437 1.437 0.641 1.437 1.437zM12 4.156c-1.75 0-5.5-0.141-7.078 0.484-0.547 0.219-0.953 0.484-1.375 0.906s-0.688 0.828-0.906 1.375c-0.625 1.578-0.484 5.328-0.484 7.078s-0.141 5.5 0.484 7.078c0.219 0.547 0.484 0.953 0.906 1.375s0.828 0.688 1.375 0.906c1.578 0.625 5.328 0.484 7.078 0.484s5.5 0.141 7.078-0.484c0.547-0.219 0.953-0.484 1.375-0.906s0.688-0.828 0.906-1.375c0.625-1.578 0.484-5.328 0.484-7.078s0.141-5.5-0.484-7.078c-0.219-0.547-0.484-0.953-0.906-1.375s-0.828-0.688-1.375-0.906c-1.578-0.625-5.328-0.484-7.078-0.484zM24 14c0 1.656 0.016 3.297-0.078 4.953-0.094 1.922-0.531 3.625-1.937 5.031s-3.109 1.844-5.031 1.937c-1.656 0.094-3.297 0.078-4.953 0.078s-3.297 0.016-4.953-0.078c-1.922-0.094-3.625-0.531-5.031-1.937s-1.844-3.109-1.937-5.031c-0.094-1.656-0.078-3.297-0.078-4.953s-0.016-3.297 0.078-4.953c0.094-1.922 0.531-3.625 1.937-5.031s3.109-1.844 5.031-1.937c1.656-0.094 3.297-0.078 4.953-0.078s3.297-0.016 4.953 0.078c1.922 0.094 3.625 0.531 5.031 1.937s1.844 3.109 1.937 5.031c0.094 1.656 0.078 3.297 0.078 4.953z">
+			</path>
+		</symbol>
+		<symbol id="icon-vk" viewBox="0 0 31 28">
+			<title>vkontakte</title>
+			<path
+				d="M29.953 8.125c0.234 0.641-0.5 2.141-2.344 4.594-3.031 4.031-3.359 3.656-0.859 5.984 2.406 2.234 2.906 3.313 2.984 3.453 0 0 1 1.75-1.109 1.766l-4 0.063c-0.859 0.172-2-0.609-2-0.609-1.5-1.031-2.906-3.703-4-3.359 0 0-1.125 0.359-1.094 2.766 0.016 0.516-0.234 0.797-0.234 0.797s-0.281 0.297-0.828 0.344h-1.797c-3.953 0.25-7.438-3.391-7.438-3.391s-3.813-3.938-7.156-11.797c-0.219-0.516 0.016-0.766 0.016-0.766s0.234-0.297 0.891-0.297l4.281-0.031c0.406 0.063 0.688 0.281 0.688 0.281s0.25 0.172 0.375 0.5c0.703 1.75 1.609 3.344 1.609 3.344 1.563 3.219 2.625 3.766 3.234 3.437 0 0 0.797-0.484 0.625-4.375-0.063-1.406-0.453-2.047-0.453-2.047-0.359-0.484-1.031-0.625-1.328-0.672-0.234-0.031 0.156-0.594 0.672-0.844 0.766-0.375 2.125-0.391 3.734-0.375 1.266 0.016 1.625 0.094 2.109 0.203 1.484 0.359 0.984 1.734 0.984 5.047 0 1.062-0.203 2.547 0.562 3.031 0.328 0.219 1.141 0.031 3.141-3.375 0 0 0.938-1.625 1.672-3.516 0.125-0.344 0.391-0.484 0.391-0.484s0.25-0.141 0.594-0.094l4.5-0.031c1.359-0.172 1.578 0.453 1.578 0.453z">
+			</path>
+		</symbol>
+		<symbol id="icon-heart" viewBox="0 0 20 20">
+			<title>heart</title>
+			<path
+ d="M9.996185,6.0561523 C7.925049,1.2021484 2.0377197,2.3344727 1.9989319,7.96875 C1.9775391,11.063477 4.8023987,12.220703 6.6832275,13.45752 C8.506958,14.656738 9.804962,16.297852 10.008301,16.99707 C10.182495,16.312012 11.628235,14.624512 13.316467,13.424316 C15.162506,12.11084 18.022156,11.029297 18.000763,7.936035 C17.961731,2.2875977 11.972107,1.3959961 9.996185,6.0561523 Z"/>
+			</path>
+		</symbol>
 
-</svg>
-
-
-<div class="wrap">
-	
-<header class="head">
-	<div class="head__content container-fluid">
-		<div class="logo">
-			<a href="#!"><img class="logo__img"  src="img/logo.png" alt=""></a>
-		</div>	
-		<nav>
-			<ul class="nav">
-				<li><a class="nav-link active" href="#">Расписание</a></li>
-				<li><a class="nav-link" href="#creativ">Педагоги</a></li>
-				<li><a class="nav-link" href="#">Каталог товаров</a></li>
-				<li><a class="nav-link" href="#">Блог</a></li>
-				<li><a class="nav-link" href="#about">О нас</a></li>
-			</ul>
-		</nav>
-	</div>	
-</header>
-		
-
-<main>
-<section class="baner">
-	<div class="baner__wrap container-fluid">
-		<div class="baner__title-block">
-			<h1 class="title_h1">Open Art Studio</h1>
-			<div class="baner__subtitle">студия   творческого   развития   в   Киеве   на   Позняках</div>
-		</div>
-		<div class="baner__btn-block">
-			<button class="btn btn_modal btn_register" data-btn="one" >записаться</button>
-			<button class="btn btn_modal btn_more" >узнать больше</button>
-		</div>
-	</div>
-</section>
+	</svg>
 
 
-<section class="news">
-	<div class="news__wrap container-fluid">
-		
-		<div class="arrow_carousel3">
-			<button class="prev3" aria-label="Previous"></button>
-			<button class="next3" aria-label="Next"></button>
-		</div>
-	
-		<ul class="carousel__list">
-			
-			<div>
-				<li class="carousel__item">
-					<a class="" target="_blank" href="http://p.open-art.com.ua/test/">  
-						<div class="carousel__img-wrap">
-							<img src="img/img_news1.jpg" alt="">
-						</div>
-						<div class="carousel__descr">
-							<div class="carousel__date">24.09.2018</div>
-							<p class="carousel__text">С 16 по 25 июля — Летние каникулы с Open Art Studio под Львовом!</p>
-						</div>
-					</a>
-				</li>
-			</div>
-			<div>
-			<li class="carousel__item">  
-				<div class="carousel__img-wrap">
-					<img src="img/img_news2.jpg" alt="">
+
+	<header class="head">
+		<div class=" container-fluid">
+
+			<div class="head__content">
+				<div class="logo">
+					<img class="logo__img" src="img/logo.png" alt="логотип">
+					<a class="logo__link" href="/" title="на главную"></a>
 				</div>
-				<div class="carousel__descr">
-					<div class="carousel__date">24.09.2018</div>
-					<p class="carousel__text">С 16 по 25 июля — Летние каникулы с Open Art Studio под Львовом!</p>
-				</div>
-			</li>
-			</div>
-			<div>
-			<li class="carousel__item">  
-				<div class="carousel__img-wrap">
-					<img src="img/img_news3.jpg" alt="">
-				</div>
-				<div class="carousel__descr">
-					<div class="carousel__date">24.09.2018</div>
-					<p class="carousel__text">С 16 по 25 июля — Летние каникулы с Open Art Studio под Львовом!</p>
-				</div>
-			</li>
-			</div>
-			<div>
-			<li class="carousel__item">  
-				<div class="carousel__img-wrap">
-					<img src="img/img_news4.jpg" alt="">
-				</div>
-				<div class="carousel__descr">
-					<div class="carousel__date">24.09.2018</div>
-					<p class="carousel__text">С 16 по 25 июля — Летние каникулы с Open Art Studio под Львовом!</p>
-				</div>
-			</li>
-			</div>
-			<div>
-			<li class="carousel__item">  
-				<div class="carousel__img-wrap">
-					<img src="img/img_news2.jpg" alt="">
-				</div>
-				<div class="carousel__descr">
-					<div class="carousel__date">24.09.2018</div>
-					<p class="carousel__text">С 16 по 25 июля — Летние каникулы с Open Art Studio под Львовом!</p>
-				</div>
-			</li>
-			</div>
-		
-		</ul>
-	</div>
-</section>
 
+				<button class="nav__burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
 
-<section id="creativ" class="creativ">
-	<div class="container-fluid">
-		
-		<div class="creativ__list">
-			<div class="creativ__item1 col-sm-12">
-				<button data-href="teach" data-id="item5" class="creativ__name">Школа танцев</button>
-			</div>
-			<div class="creativ__item2 col-sm-12">
-				<button data-href="teach" data-id="item4" class="creativ__name">Актёрское мастерство</button>
-			</div>
-			<div class="creativ__item3 col-sm-8">
-				<button data-href="teach" data-id="item5" class="creativ__name">Вокал</button>
-			</div>
-			<div class="creativ__item4 col-sm-8">
-				<button data-href="teach" data-id="item4" class="creativ__name">Акробатика</button>
-			</div>
-			<div class="creativ__item5 col-sm-8">
-				<button data-href="teach" data-id="item5" class="creativ__name">Рисование</button>
-			</div>
-		</div>
-		
-		
-		<div id="teach" class="teach">
-		
-			<div data-teach="item4" class="teach__item row">
-				<h2 class="teach__title col-md-8 ">Педагоги</h2>
-				
-				<div class="col-12 col-sm-8 col-md-4">
-					<a href="#!" onclick="openDialog('dialog-danz1', this)">
-						<div class="teach__name">Слава  Красовская ааааааааааа ааааааааа</div>
-						<div class="teach__prof">Contemporary</div>
-						<div class="teach__img-wrap">
-							<img src="img/foto.jpg" alt="" class="img_cover">
-						</div>
-					</a>
-				</div>
-				<div class="col-12 col-sm-8 col-md-4">
-					<a href="#!" onclick="openDialog('dialog-danz2', this)">
-						<div class="teach__name">Слава  Красовская</div>
-						<div class="teach__prof">Contemporary</div>
-						<div class="teach__img-wrap">
-							<img src="img/img_creativ6.jpg" alt="" class="img_cover">
-						</div>
-					</a>
-				</div>
-			</div>
-			
-			<div data-teach="item5" class="teach__item row">
-				<h2 class="teach__title col-md-8 ">Педагоги</h2>
-				<div class="col-12 col-sm-8 col-md-4">
-					<a href="#!" onclick="openDialog('dialog-danz1', this)">
-						<div class="teach__name">Слава  Красовская</div>
-						<div class="teach__prof">Contemporary</div>
-						<div class="teach__img-wrap">
-							<img src="img/foto.jpg" alt="" class="img_cover">
-						</div>
-					</a>
-				</div>
-			</div>
-		
-		</div>
-		
-		
-		
-
-		
-		
-	</div>
-</section>
-	
-
-
-<section class="calendar">
-	<div class="container-fluid">
-		<div class="row">
-				<select >
-					<option value="">все дни</option>
-					<option value="">пн</option>
-					<option value="">вт</option>
-					<option value="">ср</option>
-				</select>
-				<select class="all-styles">
-					<option value="all-styles" selected="selected">Все стили</option>
-					<option value="Juzz-funk">Juzz-funk</option>
-					<option value="Вокал">Вокал</option>
-					<option value="Детки">Детки</option>
-					<option value="Hip-hop">Hip-hop</option>
-					<option value="Гитара">Гитара</option>
-					<option value="Contemperary">Contemperary</option>
-					<option value="Vogue">Vogue</option>
-					<option value="Детская хореография">Детская хореография</option>
-					<option value="Акробатика">Акробатика</option>
-					<option value="Актерское мастерство">Актерское мастерство</option>
-					<option value="Хореография">Хореография</option>
-				</select>
-				<select class="all-category">
-					<option value="all-category" selected="selected">Категории</option>
-					<option value="3-5 лет">3-5 лет</option>
-					<option value="4-5 лет">4-5 лет</option>
-					<option value="5-7 лет">5-7 лет</option>
-					<option value="от 6 лет">от 6 лет</option>
-					<option value="6-7 лет">6-7 лет</option>
-					<option value="от 7 лет">от 7 лет</option>
-					<option value="7-11 лет">7-11 лет</option>
-					<option value="от 8 лет">от 8 лет</option>
-					<option value="от 11 лет">от 11 лет</option>
-					<option value="от 12 лет">от 12 лет</option>
-					<option value="18+">18+</option>
-				</select>
-		</div>
-		<div class=" table-head">
-			<div class="col-3">Дни группы</div>
-			<div class="col-2">Начало</div>
-			<div class="col-2">Конец</div>
-			<div class="col-3">Стиль</div>
-			<div class="col-3">Категории</div>
-			<div class="col-5">Педагоги</div>
-			<div class="col-3">Уровень</div>
-			<div class="col-2">Зал</div>
-		</div>
-	</div>
-</section>
-
-
-<section class="shop"> 
-	<h2 class="shop__title title_h2">Open-Store</h2>
-	<a class="shop__link btn btn_link" target="_blank" href="http://store.open-kids.com/ukraine">в магазин</a>
-</section>
-
- 
-<section class="store">
-	<div class="container-fluid">
-		<ul class="gallery__list row">
-			
-			<li class="gallery__item col-sm-12 col-md-8">
-				<a href="http://open-art.com.ua/" title="Браслеты open big" target="_blank">
-					<div class="gallery__img-wrap "><img src="img/img1-shop.jpg" /></div>
-					<div class="gallery__descr">
-						<div class="gallery__text">Браслеты open big <br>
-						<span>Белые и черные браслеты с логотипом Open Art Studio</span></div>
-						<span class="gallery__price">60₴</span>
-					</div>
-				</a>
-			</li>
-			<li class="gallery__item col-sm-12 col-md-8">
-				<div class="gallery__img-wrap "><img src="img/img2-shop.jpg" /></div>
-				<div class="gallery__descr">
-					<div class="gallery__text">Браслеты open big <br>
-						<span>Белые и черные браслеты с логотипом Open Art Studio</span></div>
-						<span class="gallery__price">60₴</span>
-				</div>
-			</li>
-			<li class="gallery__item col-sm-12 col-md-8">
-				<div class="gallery__img-wrap "><img src="img/img3-shop.jpg" /></div>
-				<div class="gallery__descr">
-					<div class="gallery__text">Браслеты open big <br>
-						<span>Белые и черные браслеты с логотипом Open Art Studio</span></div>
-						<span class="gallery__price">60₴</span>
-				</div>
-			</li>
-			<li class="gallery__item col-sm-12 col-md-8">
-				<div class="gallery__img-wrap "><img src="img/img4-shop.jpg" /></div>
-				<div class="gallery__descr">
-					<div class="gallery__text">Браслеты open big <br>
-						<span>Белые и черные браслеты с логотипом Open Art Studio</span></div>
-						<span class="gallery__price">60₴</span>
-				</div>
-			</li>
-			<li class="gallery__item col-sm-12 col-md-8">
-				<div class="gallery__img-wrap "><img src="img/img5-shop.jpg" /></div>
-				<div class="gallery__descr">
-					<div class="gallery__text">Браслеты open big <br>
-						<span>Белые и черные браслеты с логотипом Open Art Studio</span></div>
-						<span class="gallery__price">60₴</span>
-				</div>
-			</li>
-			<li class="gallery__item col-sm-12 col-md-8">
-				<div class="gallery__img-wrap "><img src="img/img6-shop.jpg" /></div>
-				<div class="gallery__descr">
-					<div class="gallery__text">Браслеты open big <br>
-						<span>Белые и черные браслеты с логотипом Open Art Studio</span></div>
-						<span class="gallery__price">60₴</span>
-				</div>
-			</li>
-		</ul>
-	</div>
-</section>
-
-
-
-<!--  video-carousel  -->
-<section class="video-carousel">
-	<div class="container-fluid">
-		<div class="row">
-	
-			<div class="col-sm-22">
-				<ul class="swiper-container s1">
-					<div class="swiper-wrapper">
-					
-						<div class="swiper-slide">
-							<li class="video-carousel__item">
-								<iframe  allow="autoplay; encrypted-media" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/2DOpF-stzc8?rel=0&controls=1&showinfo=1" width="560" height="315" frameborder="0"></iframe>
-							</li>
-						</div>
-						
-						<div class="swiper-slide">
-							<li class="video-carousel__item">
-								<iframe  allow="autoplay; encrypted-media" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/eCkBdziK5RM?rel=0&controls=1&showinfo=1" width="560" height="315" frameborder="0"></iframe>
-							</li>
-						</div>
-						
-						<div class="swiper-slide">
-							<li class="video-carousel__item">
-								<iframe  allow="autoplay; encrypted-media" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/2DOpF-stzc8?rel=0&controls=1&showinfo=1" width="560" height="315" frameborder="0"></iframe>
-							</li>
-						</div>
-						
-					</div>
-				</ul>
-			</div>
-			
-			<div class="arrow_video-carousel col-sm-2">
-				<button class="prev_video" aria-label="Previous"></button>
-				<button class="next_video" aria-label="Next"></button>
-			</div>
-			
-		</div>	
-	</div>
-</section> 
-
-
-
-<section id="about" class="about">
-	<div class="container-fluid">
-		<div class="row">
-			<div class=" col-sm-10 col-md- col-lg-">
-				<h2 class="title_h2">О нас</h2>
-				<p class="about__text">Open Art Studio — это совершенно новый подход к развитию 	 талантов итворческих способностей молодого поколения, позволяющий раскрыть весь
-					потенциал и индивидуальность, которые заложены в каждом.</p>
-				<p class="">Open Art Studio — современная школа искусств, в которой главными из
-					направлений являются</p>
-				<div class="bold row">	
-					<ul class="about__list col-sm-12">
-						<li class="">школа танцев с уроками <br>современной хореографии</li>
-						<li class="">акробатика</li>
-						<li class="">актерское мастерство</li>
-					</ul>
-					<ul class="about__list col-sm-12">	
-						<li class="">уроки вокала</li>
-						<li class="">уроки игры на гитаре</li>
-						<li class="">уроки рисования</li>
-					</ul>
-				</div>	
-				<p class="">Профессиональные танцоры, актеры, вокалисты и режиссеры помогут Вам
-					стать совершеннее,  выявить способности и развить их.  Откройте вместе с
-					нами свое новое — «Я».  Вам понравится.</p>
-			</div>
-			<div class=" col-sm-14 col-md- col-lg-">
-					<img src="img/img_about1.jpg" alt="" class="">
-			</div>
-			
-			<div class=" col-sm-7 col-md- col-lg-">
-					<img src="img/img_about2.jpg" alt="" class="">
-			</div>
-			<div class=" col-sm-17 col-md- col-lg-">
-				<h3 class="title_h3">Open Kids</h3>
-				<p class="">Open Kids — это больше, чем просто поп-группа. Open Kids — эт о пять талантливых, добрых и прекрасных молодых исполнительниц:
-				Ангелина, Аня, Лера, Юля и Аня — которые поют, танцуют и творят, потому что они искренне любят вдохновлять окружающих людей. Open Kids
-				— это яркие звезды, которые загорелись среди талантливых тинейджеров Украины, которые светят и зажигают все новые огни среди своих
-				друзей, поклонников и слушателей.</p>
-				<div class="about__teach row">
-					<div class="col-sm-5">	
-						<div class="about__bg-img_cover" style="background-image: url('img/img_about3.jpg');"></div>
-						<div class="bold about__name">Анна <br>Бобровская</div>
-					</div>
-					<div class="col-sm-5">	
-						<div class="about__bg-img_cover" style="background-image: url('img/img_about3.jpg');"></div>
-						<div class="bold about__name">Анна <br>Бобровская</div>
-					</div>
-				</div>
-				<p class="">На протяжении трех лет главной целью Open Art Studio было и остается творческое развитие детей, выявление талантов и их развитие. П
-				араллельно проходил поиск самых талантливых, харизматичных и трудолюбивых детей, в результате чего был отобран основной состав студии,
-				занятия с которым перешли на новый, профессиональный уровень. Была проведена колоссальная работа, в которой принимали участие наши
-				педагоги, благодаря чему стартовал первый вокально-танцевальный проект Open Art Studio – «Open Kids». В составе проекта четверо
-				уникальных подростков, которые, не смотря на свой юный возраст, покоряют своими вокальными и хореографическими талантами,
-				профессионализмом и потрясающей энергетикой.</p>
-			</div>
-		</div>
-		
-		<div class="about_float">	
-			<div class="about__item2 col-sm-16 col-md- col-lg-">
-				<h3 class="about__title3 title_h3">Open Сrew</h3>
-				<p class="">Open Сrew — это самые талантливые дети, которых преподаватели Open Art Studio отбирали среди учеников студии</p>
-				<p class="">Войти в состав Open Crew — это то, что возможно каждому ученику студии, который целеустремленно двигается вперед в своем
-				творческом развитии, посещает уроки и мастер-классы. Участники группы поют, танцуют, занимаются на уроках актерского мастерства,
-				с ними работают наши лучшие хореографы и вокалисты. Это наша гордость, ведь они принимают участие в концертах и публичных
-				мероприятиях, а также сами готовят вокальные и хореографические постановки. Они творческие, целеустремленные и динамичные,
-				их достижения, это работа наших преподавателей и их собственное желание двигаться вперед и развиваться. Конечно, у них есть
-				особые привилегии: они ходят на все направления хореографии, которые существуют в студии бесплатно. 
-				</p>
-			</div>
-			
-			<div class="about__item3 col-sm-8 col-md- col-lg-">
-				<img src="img/img_about4.jpg" alt="" class="">
-			</div>
-			
-			<div class="about__item4 col-md-8 col-lg-">
-				<img src="img/img_about5.jpg" alt="" class="about__img5 ">
-				<h3 class="title_h3">DETKI Crew</h3>
-				<p class="">DETKI – новый вокально-хореографический проект от Яны Петровой и Open Art Studio.</p>
-				<p class="">Юные, но невероятно талантливые участницы группы DETKI готовы удивлять вас ивдохновлять! Уже совсем скоро вы услышите новые песни группы, а также увидите невероятные хореографические постановки. Уверены, вам это понравится!</p>
-				<p class="">В состав группы входят: Анастасия Доманская, Марта Савенко, Сушко
-				Меланья, Савченко Николетта, Климентьева Полина и Мазуренко
-				Карина.</p>
-			</div>
-			
-			<div class="about__item5 col-md-11 col-lg-11">
-				<h3 class="title_h3">DETKI</h3>
-				<p class="">DETKI – новый вокально-хореографический проект от Яны Петровой и Open Art Studio.</p> 
-				<p class="">Юные, но невероятно талантливые участницы группы DETKI готовы удивлять вас и вдохновлять! Ужесовсем скоро вы услышите новые песни группы, а также увидите невероятные хореографические постановки. Уверены, вам это понравится!</p>
-				<p class="">В состав группы входят: Анастасия Доманская, Марта Савенко, Сушко Меланья, Савченко Николетта, Климентьева Полина и Мазуренко Карина.</p>
-				<img src="img/img_about6.jpg" alt="" class="">
-			</div>
-		</div>
-	</div>
-</section>
-
-
-<section class="reviews">
-	<div class="container-fluid">
-		<div class="row reviews__wrap">
-		
-			
-			<div class="col-sm-8">	
-				<div class="reviews__bg-img_cover" data-bg style="background-image: url('img/foto.jpg')"></div>
-			</div>
-			
-			<div class="reviews__content col-sm-8">
-				<div data-text="1" class="reviews__text" style="display: block">
-					<div class="reviews__name">Слава  Красовская </div>
-					<div class="">Кто-то такая</div>
-					<p class="">“Сайт рыбатекст поможет дизайнеру, верстальщику,
-						вебмастеру сгенерировать несколько абзацев более
-						менее осмысленного текста рыбы на русском языке, а
-						начинающему оратору отточить навык публичных
-						выступлений в домашних условиях. При создании
-						генератора мы использовали небезизвестный
-						универсальный код речей. “</p>
-				</div>
-				<div data-text="2" class="reviews__text">
-					<div class="">Саша  Красовская </div>
-					<div class="">Кто-то такая</div>
-					<p class="">“Сайт рыбатекст поможет дизайнеру, верстальщику,
-						вебмастеру сгенерировать несколько абзацев более
-						менее осмысленного текста рыбы на русском языке, а
-						начинающему оратору отточить навык публичных
-						выступлений в домашних условиях. При создании
-						генератора мы использовали небезизвестный
-						универсальный код речей. “</p>
-				</div>
-				<div data-text="3" class="reviews__text">
-					<div class="">Петя  Красовская </div>
-					<div class="">Кто-то такая</div>
-					<p class="">“Сайт рыбатекст поможет дизайнеру, верстальщику,
-						вебмастеру сгенерировать несколько абзацев более
-						менее осмысленного текста рыбы на русском языке, а
-						начинающему оратору отточить навык публичных
-						выступлений в домашних условиях. При создании
-						генератора мы использовали небезизвестный
-						универсальный код речей. “</p>
-				</div>
-			</div>
-			<div class=" col-sm-8 col-md- col-lg-">
-				<!-- carousel -->
-				<div class="arrow_reviews">
-					<button class="prev_reviews" aria-label="Previous" type="button"></button>
-					<button class="next_reviews" aria-label="Next" type="button"></button>
-				</div>
-								
-				<ul class="swiper-container reviews_list">
-					<div class="swiper-wrapper">
-							
-						<div class="swiper-slide">
-						<li class="reviews__item">
-							<a class=""  href="#!">  
-								<div class="reviews__img-wrap">
-									<img data-id_img="1" src="img/foto1.jpg" alt="" class="img_cover">
-								</div>
-							</a>
-						</li>
-						</div>
-						<div class="swiper-slide">
-						<li class="reviews__item">
-							<a class=""  href="#!">  
-								<div class="reviews__img-wrap">
-									<img data-id_img="2" src="img/img_creativ3.jpg" alt="" class="img_cover">
-								</div>
-							</a>
-						</li>
-						</div>
-						<div class="swiper-slide">
-						<li class="reviews__item">
-							<a class=""  href="#!">  
-								<div class="reviews__img-wrap">
-									<img data-id_img="3" src="img/img_reviews1.jpg" alt="" class="img_cover">
-								</div>
-							</a>
-						</li>
-						</div>
-						<div class="swiper-slide">
-						<li class="reviews__item">
-							<a class=""  href="#!">  
-								<div class="reviews__img-wrap">
-									<img data-id_img="4" src="img/foto.jpg" alt="" class="img_cover">
-								</div>
-							</a>
-						</li>
-						</div>
-							
-					</div>
-				</ul>
-			</div>
-			
-		</div>
-	</div>
-</section>
-			
-	
-
-</main>
-
-
-<footer class="footer">
-	<div class="container-fluid">
-		<div class="footer__list row">
-			
-			<div class="footer__item footer__address">
-				<span class="">Адрес:</span>
-				<ul class="">
-					<li>г. Киев</li>
-					<li>ул. Драгоманова, 29 (т/ц "Центрум", 3 этаж)</li>
-					<li>м. Позняки</li>
-				</ul>
-			</div>
-			<div class=" footer__item footer__contacts">
-				<span class="">Контакты:</span>
-				<ul class="">
-					<li>тел. (044) 333-47-73</li>
-					<li>моб. (067) 536-26-25</li>
-					<li>e-mail: openartall@gmail.com</li>
-				</ul>
-			</div>
-			
-			<div>
-				<nav>
-					<ul class="footer__nav">
-						<li><a href="#">Расписание</a></li>
-						<li><a href="#">Педагоги</a></li>
+				<nav class="nav">
+					<ul>
+						<li><a class="active" href="#">Расписание</a></li>
+						<li><a href="#creativ">Педагоги</a></li>
 						<li><a href="#">Каталог товаров</a></li>
 						<li><a href="#">Блог</a></li>
 						<li><a href="#about">О нас</a></li>
 					</ul>
 				</nav>
-				<ul class="footer__socials">
-					<li><a aria-label="vkontakte" target="_blank" href="https://vk.com/">
-						<svg class="icon"><use xlink:href="#icon-vk"></use></svg></a>
-					</li>
-					<li><a aria-label="facebook" target="_blank" href="https://facebook.com/">
-						<svg class="icon"><use xlink:href="#icon-facebook"></use></svg></a>
-					</li>
-					<li><a aria-label="youtube" target="_blank" href="https://youtube.com/">
-						<svg class="icon"><use xlink:href="#icon-youtube"></use></svg></a>
-					</li>
-					<li><a aria-label="instagram" target="_blank" href="https://instagram.com/">
-						<svg class="icon"><use xlink:href="#icon-instagram"></use></svg></a>
-					</li>
-				</ul>
 			</div>
-			
-		</div>	
-		<div class=""><span>© Open Art Studio 2018</span></div>
-		
-	</div>
-</footer>
 
-</div>	<!-- wrap -->
-		
-<!-- modal -->
+		</div>
+	</header>
 
-<div role="dialog" id="dialog-danz1" aria-labelledby="dialog-danz_label" aria-modal="true" class="hidden">
+		<main class="main">
+
+			<section class="baner">
+				<div class=" container-fluid">
+					<div class="baner__row">
+						<div>
+							<h1 class="title_1">Open Art Studio</h1>
+							<div class="baner__subtitle">студия творческого развития в Киеве на Позняках</div>
+						</div>
+						<div>
+							<button class="btn btn_w btn_register" data-btn="one">записаться</button>
+							<button class="btn btn_w btn_more">узнать больше</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="news">
+				<div class="container">
+					<div class="news__row">
 	
-	<div class="col-12 float"><img src="img/foto.jpg" alt=""></div>
-	<div class="modal_close">
-		<button onclick="closeDialog(this)" class="" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		</button>
-	</div>
-	<h3 class="teach__name_modal" id="dialog-danz_label">Слава  Красовская</h3>
-	<p>Заслуженный мастер спорта СССР,</p>
-	<p>многократный чемпион Мира,</p>
-	<p>многократный чемпион СССР.</p>
-	<p>Преподаватель Киевской муниципальной академии эстрадного и циркового искусств.</p>
-	<p>Ученики
-	Сергея Петрова — победители и призеры престижных цирковых конкурсов в 
-	Париже, Монте-Карло и других фестивалей, а также артисты лучших цирков 
-	мира.</p>
-</div>
+						<div class="news__swiper swiper-container">
+							<div class="news__wrapper swiper-wrapper">
+								<div class="news__slide swiper-slide">
+									<a class="" target="_blank" href="http://p.open-art.com.ua/test/">
+										<div class="news__wrap_img">
+											<img class="img_cover" src="img/img_news1.jpg" alt="">
+										</div>
+										<div class="news__desc">
+											<div class="news__date">24.09.2018</div>
+											<p class="news__text">С 16 по 25 июля — Летние каникулы с Open Art Studio под Львовом!</p>
+										</div>
+									</a>
+								</div>
+	
+								<div class="news__slide swiper-slide">
+									<a class="" target="_blank" href="http://p.open-art.com.ua/test/">
+										<div class="news__wrap_img">
+											<img class="img_cover" src="img/img_news2.jpg" alt="">
+										</div>
+										<div class="news__desc">
+											<div class="news__date">24.09.2018</div>
+											<p class="news__text">С 16 по 25 июля — Летние каникулы с Open Art Studio под Львовом!</p>
+										</div>
+									</a>
+								</div>
+	
+								<div class="news__slide swiper-slide">
+									<a class="" target="_blank" href="http://p.open-art.com.ua/test/">
+										<div class="news__wrap_img">
+											<img class="img_cover" src="img/img_news3.jpg" alt="">
+										</div>
+										<div class="news__desc">
+											<div class="news__date">24.09.2018</div>
+											<p class="news__text">С 16 по 25 июля — Летние каникулы с Open Art Studio под Львовом!</p>
+										</div>
+									</a>
+								</div>
+	
+								<div class="news__slide swiper-slide">
+									<a class="" target="_blank" href="http://p.open-art.com.ua/test/">
+										<div class="news__wrap_img">
+											<img class="img_cover" src="img/img_news4.jpg" alt="">
+										</div>
+										<div class="news__desc">
+											<div class="news__date">24.09.2018</div>
+											<p class="news__text">С 16 по 25 июля — Летние каникулы с Open Art Studio под Львовом!</p>
+										</div>
+									</a>
+								</div>
+	
+								<div class="news__slide swiper-slide">
+									<a class="" target="_blank" href="http://p.open-art.com.ua/test/">
+										<div class="news__wrap_img">
+											<img class="img_cover" src="img/img_news2.jpg" alt="">
+										</div>
+										<div class="news__desc">
+											<div class="news__date">24.09.2018</div>
+											<p class="news__text">С 16 по 25 июля — Летние каникулы с Open Art Studio под Львовом!</p>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
 
-<div role="dialog" id="dialog-danz2" aria-labelledby="dialog-danz_label" aria-modal="true" class="hidden">
-	<div class="col-12 float"><img src="img/img_creativ6.jpg" alt=""></div>
-	<div class="modal_close">
-		<button onclick="closeDialog(this)" class="" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		</button>
-	</div>
-	<h3 class="teach__name_modal" id="dialog-danz_label">Слава  Красовская</h3>
-	<p>Заслуженный мастер спорта СССР,</p>
-	<p>многократный чемпион Мира,</p>
-	<p>многократный чемпион СССР.</p>
-	<p>Преподаватель Киевской муниципальной академии эстрадного и циркового искусств.</p>
-	<p>Ученики
-	Сергея Петрова — победители и призеры престижных цирковых конкурсов в 
-	Париже, Монте-Карло и других фестивалей, а также артисты лучших цирков 
-	мира.</p>
-</div>	
+						<div class="news__swiper_btn swiper_btn">
+							<button class="news__btn_prev btn_prev" aria-label="Previous">
+							</button>
+							<div class="news__swiper_pagination pagination"></div>
+							<button class="news__btn_next btn_next" aria-label="Next">
+							</button>
+						</div>
+						
+					</div>
+				</div>
+			</section>
 
+
+<section id="creativ" class="creativ">
+	<div class="container">
+
+		<div class="creativ__row">
+			<div class="creativ__item col-md-12">
+				<div class="creativ__item1">
+					<button data-id="5" class="creativ__name">Школа танцев</button>
+				</div>
+			</div>
+
+			<div class="creativ__item col-md-12">
+				<div class="creativ__item2">
+				<button data-id="4" class="creativ__name">Актёрское мастерство</button>
+				</div>
+			</div>
+
+			<div class="creativ__item col-md-8">
+				<div class="creativ__item3">
+				<button data-id="5" class="creativ__name">Вокал</button>
+				</div>
+			</div>
+
+			<div class="creativ__item col-md-8">
+				<div class="creativ__item4">
+				<button data-id="4" class="creativ__name">Акробатика</button>
+				</div>
+			</div>
+
+			<div class="creativ__item col-md-8">
+				<div class="creativ__item5">
+				<button data-id="5" class="creativ__name">Рисование</button>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="teach" class="teach">
+
+			<div data-teach="4" class="teach__item ">
+				<div class="teach-item__row">
+					<h2 class="teach__title col-md-8 ">Педагоги</h2>
+	
+					<div class="col-12 col-sm-8 col-md-4">
+						<a href="#!" onclick="openDialog('dialog-danz1', this)">
+							<div class="teach__name">Слава Красовская ааааааааааа ааааааааа</div>
+							<div class="teach__prof">Contemporary</div>
+							<div class="teach__img-wrap">
+								<img src="img/img_5.jpg" alt="" class="img_cover">
+							</div>
+						</a>
+					</div>
+					<div class="col-12 col-sm-8 col-md-4">
+						<a href="#!" onclick="openDialog('dialog-danz2', this)">
+							<div class="teach__name">Слава Красовская</div>
+							<div class="teach__prof">Contemporary</div>
+							<div class="teach__img-wrap">
+								<img src="img/img_1.jpg" alt="" class="img_cover">
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div data-teach="5" class="teach__item ">
+				<div class="teach-item__row">
+					<h2 class="teach__title col-md-8 ">Педагоги</h2>
+					<div class="col-12 col-sm-8 col-md-4">
+						<a href="#!" onclick="openDialog('dialog-danz1', this)">
+							<div class="teach__name">Слава Красовская</div>
+							<div class="teach__prof">Contemporary</div>
+							<div class="teach__img-wrap">
+								<img src="img/img_4.jpg" alt="" class="img_cover">
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+
+
+	</div>
+</section>
+
+
+
+			<section class="calendar">
+				<div class="container">
+					<div class="row">
+						<select>
+							<option value="">все дни</option>
+							<option value="">пн</option>
+							<option value="">вт</option>
+							<option value="">ср</option>
+						</select>
+						<select class="all-styles">
+							<option value="all-styles" selected="selected">Все стили</option>
+							<option value="Juzz-funk">Juzz-funk</option>
+							<option value="Вокал">Вокал</option>
+							<option value="Детки">Детки</option>
+							<option value="Hip-hop">Hip-hop</option>
+							<option value="Гитара">Гитара</option>
+							<option value="Contemperary">Contemperary</option>
+							<option value="Vogue">Vogue</option>
+							<option value="Детская хореография">Детская хореография</option>
+							<option value="Акробатика">Акробатика</option>
+							<option value="Актерское мастерство">Актерское мастерство</option>
+							<option value="Хореография">Хореография</option>
+						</select>
+						<select class="all-category">
+							<option value="all-category" selected="selected">Категории</option>
+							<option value="3-5 лет">3-5 лет</option>
+							<option value="4-5 лет">4-5 лет</option>
+							<option value="5-7 лет">5-7 лет</option>
+							<option value="от 6 лет">от 6 лет</option>
+							<option value="6-7 лет">6-7 лет</option>
+							<option value="от 7 лет">от 7 лет</option>
+							<option value="7-11 лет">7-11 лет</option>
+							<option value="от 8 лет">от 8 лет</option>
+							<option value="от 11 лет">от 11 лет</option>
+							<option value="от 12 лет">от 12 лет</option>
+							<option value="18+">18+</option>
+						</select>
+					</div>
+					<div class=" table-head">
+						<div class="col-3">Дни группы</div>
+						<div class="col-2">Начало</div>
+						<div class="col-2">Конец</div>
+						<div class="col-3">Стиль</div>
+						<div class="col-3">Категории</div>
+						<div class="col-5">Педагоги</div>
+						<div class="col-3">Уровень</div>
+						<div class="col-2">Зал</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="shop">
+				<h2 class="shop__title title_2">Open-Store</h2>
+				<a class="shop__link btn btn_b" target="_blank" href="http://store.open-kids.com/ukraine">в магазин</a>
+			</section>
+
+
+			<section id="store" class=" store">
+				<div class="container">
+
+					<div class="store__swiper swiper-container">
+						<div class="store__wrapper swiper-wrapper">
+
+							<div class="store__slide swiper-slide col-md-12 col-xl-8">
+								<a href="http://open-art.com.ua/" title="Браслеты open big" target="_blank">
+									<div class="store__wrap_img ">
+										<img class="img_cover" src="img/shop/img1.jpg" alt="">
+									</div>
+									<div class="store__desc">
+										<div class="store__title">Браслеты open big <br>
+											<span>Белые и черные браслеты с логотипом Open Art Studio</span></div>
+										<div class="store__text">60₴</div>
+									</div>
+								</a>
+							</div>
+
+							<div class="store__slide swiper-slide col-md-12 col-xl-8">
+								<a href="http://open-art.com.ua/" title="Браслеты open big" target="_blank">
+									<div class="store__wrap_img ">
+										<img class="img_cover" src="img/shop/img2.jpg" alt="">
+									</div>
+									<div class="store__desc">
+										<div class="store__title">Браслеты open <br>
+											<span>Белые и черные браслеты разных размеров с логотипом Open Art Studio</span></div>
+										<div class="store__text">30₴</div>
+									</div>
+								</a>
+							</div>
+
+							<div class="store__slide swiper-slide col-md-12 col-xl-8">
+								<a href="http://open-art.com.ua/" title="Браслеты open big" target="_blank">
+									<div class="store__wrap_img ">
+										<img class="img_cover" src="img/shop/img3.jpg" alt="">
+									</div>
+									<div class="store__desc">
+										<div class="store__title">Эко ручки open art studio и open kids <br>
+											<span>Эко ручки Open Art Studio и Open Kids</span></div>
+										<div class="store__text">25₴</div>
+									</div>
+								</a>
+							</div>
+
+							<div class="store__slide swiper-slide col-md-12 col-xl-8">
+								<a href="http://open-art.com.ua/" title="Браслеты open big" target="_blank">
+									<div class="store__wrap_img ">
+										<img class="img_cover" src="img/shop/img4.jpg" alt="">
+									</div>
+									<div class="store__desc">
+										<div class="store__title">Худи «поколение танцы» <br>
+											<span>Худи «Поколение танцы» два цвета, размеры 
+												S, M, L</span></div>
+										<div class="store__text">850₴</div>
+									</div>
+								</a>
+							</div>
+
+							<div class="store__slide swiper-slide col-md-12 col-xl-8">
+								<a href="http://open-art.com.ua/" title="Браслеты open big" target="_blank">
+									<div class="store__wrap_img ">
+										<img class="img_cover" src="img/shop/img5.jpg" alt="">
+									</div>
+									<div class="store__desc">
+										<div class="store__title">Штаны «поколение танцы»<br>
+											<span>Штаны «Поколение танцы» два цвета, размеры 
+												S, M, L</span></div>
+										<div class="store__text">1200₴</div>
+									</div>
+								</a>
+							</div>
+
+							<div class="store__slide swiper-slide col-md-12 col-xl-8">
+								<a href="http://open-art.com.ua/" title="Браслеты open big" target="_blank">
+									<div class="store__wrap_img ">
+										<img class="img_cover" src="img/shop/img6.jpg" alt="">
+									</div>
+									<div class="store__desc">
+										<div class="store__title">Футболка «поколение танцы» <br>
+											<span>Футболка «Поколение танцы», размеры S, M, L</span></div>
+										<div class="store__text">450₴</div>
+									</div>
+								</a>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="store__swiper_btn swiper_btn">
+						<button class="store__btn_prev btn_prev" aria-label="Previous">
+						</button>
+						<div class="store__swiper_pagination pagination"></div>
+						<button class="store__btn_next btn_next" aria-label="Next">
+						</button>
+					</div>
+
+				</div>
+			</section>
+
+
+			<section class="tape">
+				<div class="row">
+					<div class="tape__col">
+						<div class="tape__item">
+							<div class="tape__wrap_img ">
+								<img class="img_cover" src="img/pic_1.jpg" alt="">
+							</div>
+							<div class="tape__desc">
+								<div class="tape__date">1 день назад <span>325
+										<svg class="heart__icon icon" aria-hidden="true">
+											<use xlink:href="#icon-heart"></use>
+										</svg></span>
+								</div>
+								<div class="tape__text">12 марта — мастер-классы от Виктории Ковальчук в Open Art Studio</div>
+							</div>
+						</div>
+					</div>
+					<div class="tape__col">
+						<div class="tape__item">
+							<div class="tape__wrap_img ">
+								<img class="img_cover" src="img/pic_2.jpg" alt="">
+							</div>
+							<div class="tape__desc">
+								<div class="tape__date">1 день назад <span>325
+										<svg class="heart__icon icon" aria-hidden="true">
+											<use xlink:href="#icon-heart"></use>
+										</svg></span>
+								</div>
+								<div class="tape__text">12 марта — мастер-классы от Виктории Ковальчук в Open Art Studio</div>
+							</div>
+						</div>
+					</div>
+					<div class="tape__col">
+						<div class="tape__item">
+							<div class="tape__wrap_img ">
+								<img class="img_cover" src="img/pic_3.jpg" alt="">
+							</div>
+							<div class="tape__desc">
+								<div class="tape__date">1 день назад <span>325
+										<svg class="heart__icon icon" aria-hidden="true">
+											<use xlink:href="#icon-heart"></use>
+										</svg></span>
+								</div>
+								<div class="tape__text">12 марта — мастер-классы от Виктории Ковальчук в Open Art Studio</div>
+							</div>
+						</div>
+					</div>
+					<div class="tape__col">
+						<div class="tape__item">
+							<div class="tape__wrap_img ">
+								<img class="img_cover" src="img/pic_4.jpg" alt="">
+							</div>
+							<div class="tape__desc">
+								<div class="tape__date">1 день назад <span>325
+										<svg class="heart__icon icon" aria-hidden="true">
+											<use xlink:href="#icon-heart"></use>
+										</svg></span>
+								</div>
+								<div class="tape__text">12 марта — мастер-классы от Виктории Ковальчук в Open Art Studio</div>
+							</div>
+						</div>
+					</div>
+					<div class="tape__col">
+						<div class="tape__item">
+							<div class="tape__wrap_img ">
+								<img class="img_cover" src="img/pic_5.jpg" alt="">
+							</div>
+							<div class="tape__desc">
+								<div class="tape__date">1 день назад <span>325
+										<svg class="heart__icon icon" aria-hidden="true">
+											<use xlink:href="#icon-heart"></use>
+										</svg></span>
+								</div>
+								<div class="tape__text">12 марта — мастер-классы от Виктории Ковальчук в Open Art Studio</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</section>
+			
 		
-<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-<script src="js/jquery.min.js"></script>
-<script src="js/slick.min.js"></script> 
-<script src="js/ofi.min.js"></script>
-<script src="js/utils.js"></script>
-<script src="js/dialog.js"></script>
-<script src="js/swiper.min.js"></script>
-<!--  <script src="js/owl.carousel.min.js"></script>-->
+			<!--  video-carousel  -->
+			<section class="video">
+				<div class="container">
+					<div class="row">
 
-<script src="js/main.js"></script>
+						<div class="col-md-20 col-xl-22">
+							<div class="swiper-container video__swiper">
+								<div class="swiper-wrapper">
+
+									<div class="swiper-slide">
+										<div class="video-carousel__item">
+											<iframe allow="autoplay; encrypted-media" allowfullscreen=""
+												src="https://www.youtube-nocookie.com/embed/2DOpF-stzc8?rel=0&controls=1&showinfo=1" width="560"
+												height="315" frameborder="0"></iframe>
+										</div>
+									</div>
+
+									<div class="swiper-slide">
+										<div class="video-carousel__item">
+											<iframe allow="autoplay; encrypted-media" allowfullscreen=""
+												src="https://www.youtube-nocookie.com/embed/eCkBdziK5RM?rel=0&controls=1&showinfo=1" width="560"
+												height="315" frameborder="0"></iframe>
+										</div>
+									</div>
+
+									<div class="swiper-slide">
+										<div class="video-carousel__item">
+											<iframe allow="autoplay; encrypted-media" allowfullscreen=""
+												src="https://www.youtube-nocookie.com/embed/2DOpF-stzc8?rel=0&controls=1&showinfo=1" width="560"
+												height="315" frameborder="0"></iframe>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="video__col_btn col-md-4 col-xl-2">
+							<div class="video__swiper_btn swiper_btn">
+								<button class="video__btn_prev btn_prev" aria-label="Previous">
+								</button>
+								<div class="video__swiper_pagination pagination"></div>
+								<button class="video__btn_next btn_next" aria-label="Next">
+								</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+
+
+			<section id="about" class="about">
+				<div class="container">
+					<div class="row">
+						<div class="about__col_1 col-xl-10 ">
+							<h2 class="title_2">О нас</h2>
+							<p>Open Art Studio — это совершенно новый подход к развитию талантов итворческих
+								способностей молодого поколения, позволяющий раскрыть весь
+								потенциал и индивидуальность, которые заложены в каждом.</p>
+							<p>Open Art Studio — современная школа искусств, в которой главными из
+								направлений являются</p>
+							<div class="bold row">
+								<ul class="about__list col-sm-12">
+									<li class="">школа танцев с уроками <br>современной хореографии</li>
+									<li class="">акробатика</li>
+									<li class="">актерское мастерство</li>
+								</ul>
+								<ul class="about__list col-sm-12">
+									<li class="">уроки вокала</li>
+									<li class="">уроки игры на гитаре</li>
+									<li class="">уроки рисования</li>
+								</ul>
+							</div>
+							<p>Профессиональные танцоры, актеры, вокалисты и режиссеры помогут Вам
+								стать совершеннее, выявить способности и развить их. Откройте вместе с
+								нами свое новое — «Я». Вам понравится.</p>
+						</div>
+
+						<div class="about__col_2 col-xl-14">
+							<img src="img/img_about1.jpg" alt="">
+						</div>
+
+						<div class="about__col_3 col-xl-7 order-1 order-xl-0">
+							<img src="img/img_about2.jpg" alt="">
+						</div>
+
+						<div class="about__col_4 col-xl-17">
+							<h3 class="title_3">Open Kids</h3>
+							<p>Open Kids — это больше, чем просто поп-группа. Open Kids — эт о пять талантливых, добрых и
+								прекрасных молодых исполнительниц:
+								Ангелина, Аня, Лера, Юля и Аня — которые поют, танцуют и творят, потому что они искренне любят
+								вдохновлять окружающих людей. Open Kids
+								— это яркие звезды, которые загорелись среди талантливых тинейджеров Украины, которые светят и зажигают
+								все новые огни среди своих
+								друзей, поклонников и слушателей.</p>
+							<div class="about__row_teach row">
+								<div class="about__teach col-12 col-md-6 col-xl-5">
+									<div class="about__wrap_img ">
+										<img class="img_cover" src="img/img_1.jpg" alt="">
+									</div>
+									<div class="about__name">Анна <br>Бобровская</div>
+								</div>
+								<div class="about__teach col-12 col-md-6 col-xl-5">
+									<div class="about__wrap_img ">
+										<img class="img_cover" src="img/img_2.jpg" alt="">
+									</div>
+									<div class="about__name">Анна <br>Бобровская</div>
+								</div>
+								<div class="about__teach col-12 col-md-6 col-xl-5">
+									<div class="about__wrap_img ">
+										<img class="img_cover" src="img/img_3.jpg" alt="">
+									</div>
+									<div class="about__name">Анна <br>Бобровская</div>
+								</div>
+								<div class="about__teach col-12 col-md-6 col-xl-5">
+									<div class="about__wrap_img ">
+										<img class="img_cover" src="img/img_4.jpg" alt="">
+									</div>
+									<div class="about__name">Анна <br>Бобровская</div>
+								</div>
+
+							</div>
+							<p>На протяжении трех лет главной целью Open Art Studio было и остается творческое развитие
+								детей, выявление талантов и их развитие. П
+								араллельно проходил поиск самых талантливых, харизматичных и трудолюбивых детей, в результате чего был
+								отобран основной состав студии,
+								занятия с которым перешли на новый, профессиональный уровень. Была проведена колоссальная работа, в
+								которой принимали участие наши
+								педагоги, благодаря чему стартовал первый вокально-танцевальный проект Open Art Studio – «Open Kids». В
+								составе проекта четверо
+								уникальных подростков, которые, не смотря на свой юный возраст, покоряют своими вокальными и
+								хореографическими талантами,
+								профессионализмом и потрясающей энергетикой.</p>
+						</div>
+					</div>
+
+					<!-- float -->
+
+					<div class="about_float row">
+						<div class="about__col_5 col-md-14 col-xl-16">
+							<h3 class="title_3">Open Сrew</h3>
+							<p>Open Сrew — это самые талантливые дети, которых преподаватели Open Art Studio отбирали среди
+								учеников студии</p>
+							<p>Войти в состав Open Crew — это то, что возможно каждому ученику студии, который
+								целеустремленно двигается вперед в своем
+								творческом развитии, посещает уроки и мастер-классы. Участники группы поют, танцуют, занимаются на
+								уроках актерского мастерства,
+								с ними работают наши лучшие хореографы и вокалисты. Это наша гордость, ведь они принимают участие в
+								концертах и публичных
+								мероприятиях, а также сами готовят вокальные и хореографические постановки. Они творческие,
+								целеустремленные и динамичные,
+								их достижения, это работа наших преподавателей и их собственное желание двигаться вперед и развиваться.
+								Конечно, у них есть
+								особые привилегии: они ходят на все направления хореографии, которые существуют в студии бесплатно.
+							</p>
+						</div>
+
+						<div class="about__col_6 col-md-10 col-xl-8">
+							<img src="img/img_about4.jpg" alt="">
+						</div>
+
+						<div class="about__col_7 col-md-24 col-xl-8">
+							<div class="row">
+								<div class="about__col_8 col-md-11 col-xl-24 order-1 order-md-0 order-xl-0">
+									<img src="img/img_about5.jpg" alt="" class="about__img5 ">
+								</div>
+								
+								<div class="col-md-13 col-xl-24 ">
+									<h3 class="title_3">DETKI Crew</h3>
+									<p>DETKI – новый вокально-хореографический проект от Яны Петровой и Open Art Studio.</p>
+									<p>Юные, но невероятно талантливые участницы группы DETKI готовы удивлять вас ивдохновлять! Уже
+										совсем скоро вы услышите новые песни группы, а также увидите невероятные хореографические постановки.
+										Уверены, вам это понравится!</p>
+									<p>В состав группы входят: Анастасия Доманская, Марта Савенко, Сушко
+										Меланья, Савченко Николетта, Климентьева Полина и Мазуренко
+										Карина.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="about__col_9 col-md-20 col-xl-11">
+							<h3 class="title_3">DETKI</h3>
+							<p>DETKI – новый вокально-хореографический проект от Яны Петровой и Open Art Studio.</p>
+							<p>Юные, но невероятно талантливые участницы группы DETKI готовы удивлять вас и вдохновлять!
+								Ужесовсем скоро вы услышите новые песни группы, а также увидите невероятные хореографические постановки.
+								Уверены, вам это понравится!</p>
+							<p>В состав группы входят: Анастасия Доманская, Марта Савенко, Сушко Меланья, Савченко Николетта,
+								Климентьева Полина и Мазуренко Карина.</p>
+							<img src="img/img_about6.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+			<section class="reviews">
+				<div class="container">
+					<div class="row reviews__row">
+
+
+						<div class="reviews__col_img col-md-12 col-xl-8">
+							<div class="reviews__bg_cover" data-bg style="background-image: url('img/img_1.jpg')"></div>
+						</div>
+
+						<div class="reviews__col_text col-md-12 col-xl-8">
+							<div data-text="1" class="reviews__text" style="display: block">
+								<div class="reviews__name">Слава Красовская </div>
+								<div class="">Кто-то такая</div>
+								<p class="">“Сайт рыбатекст поможет дизайнеру, верстальщику,
+									вебмастеру сгенерировать несколько абзацев более
+									менее осмысленного текста рыбы на русском языке, а
+									начинающему оратору отточить навык публичных
+									выступлений в домашних условиях. При создании
+									генератора мы использовали небезизвестный
+									универсальный код речей. “</p>
+							</div>
+							<div data-text="2" class="reviews__text">
+								<div class="">Саша Красовская </div>
+								<div class="">Кто-то такая</div>
+								<p class="">“Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus officia suscipit id illum quis accusamus, possimus quibusdam quidem, blanditiis fuga perferendis? Reprehenderit omnis unde voluptatem excepturi iusto deleniti. Ipsum itaque ducimus dolorem blanditiis fuga. Asperiores optio nam quas provident accusantium! “</p>
+							</div>
+							<div data-text="3" class="reviews__text">
+								<div class="">Петя Красовская </div>
+								<div class="">Кто-то такая</div>
+								<p class="">“Сайт рыбатекст поможет дизайнеру, верстальщику,
+									вебмастеру сгенерировать несколько абзацев более
+									менее осмысленного текста рыбы на русском языке, а
+									начинающему оратору отточить навык публичных
+									выступлений в домашних условиях. При создании
+									генератора мы использовали небезизвестный
+									универсальный код речей. “</p>
+							</div>
+						</div>
+
+						<!-- carousel -->
+						<div class=" col-md-16 col-xl-8">
+
+							<div class="reviews__wrap_swiper">
+								<div class="reviews__swiper swiper-container">
+									<div class="reviews__swiper_wrapper swiper-wrapper">
+
+										<div class="swiper-slide">
+											<a class="reviews__wrap_img" href="#!">
+												<img data-id_img="1" src="img/img_1.jpg" alt="" class="img_cover">
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a class="reviews__wrap_img" href="#!">
+												<img data-id_img="2" src="img/img_2.jpg" alt="" class="img_cover">
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a class="reviews__wrap_img" href="#!">
+												<img data-id_img="3" src="img/img_3.jpg" alt="" class="img_cover">
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a class="reviews__wrap_img" href="#!">
+												<img data-id_img="4" src="img/img_4.jpg" alt="" class="img_cover">
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a class="reviews__wrap_img" href="#!">
+												<img data-id_img="4" src="img/img_5.jpg" alt="" class="img_cover">
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a class="reviews__wrap_img" href="#!">
+												<img data-id_img="4" src="img/img_6.jpg" alt="" class="img_cover">
+											</a>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+
+							<div class="rewiews__swiper_btn swiper_btn">
+								<button class="rewiews__btn_prev btn_prev" aria-label="Previous">
+								</button>
+								<div class="rewiews__swiper_pagination pagination"></div>
+								<button class="rewiews__btn_next btn_next" aria-label="Next">
+								</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+
+
+		</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class=" row">
+
+				<div class="col-md-13 col-xl-7 footer__item ">
+					<span class="">Адрес:</span>
+					<ul class="">
+						<li>г. Киев</li>
+						<li>ул. Драгоманова, 29 (т/ц "Центрум", 3 этаж)</li>
+						<li>м. Позняки</li>
+					</ul>
+				</div>
+				
+				<div class="col-md-11 col-xl-7 footer__item ">
+					<span class="">Контакты:</span>
+					<ul class="">
+						<li><a href="tel: +380443334773"> тел. (044) 333-47-73</a></li>
+						<li><a href="tel: +380675362625"> моб. (067) 536-26-25</a></li>
+						<li><a href="mailto: openartall@gmail.com"> e-mail: openartall@gmail.com</a></li>
+					</ul>
+				</div>
+
+				<div class="col-xl-auto  footer__col_nav">
+					<nav>
+						<ul class="footer__nav">
+							<li><a href="#">Расписание</a></li>
+							<li><a href="#">Педагоги</a></li>
+							<li><a href="#">Каталог товаров</a></li>
+							<li><a href="#">Блог</a></li>
+							<li><a href="#about">О нас</a></li>
+						</ul>
+					</nav>
+					<ul class="footer__socials">
+						<li><a aria-label="vkontakte" target="_blank" rel="noopener noreferrer" href="https://vk.com/">
+								<svg class="icon">
+									<use xlink:href="#icon-vk"></use>
+								</svg></a>
+						</li>
+						<li><a aria-label="facebook" target="_blank" rel="noopener noreferrer" href="https://facebook.com/">
+								<svg class="icon">
+									<use xlink:href="#icon-facebook"></use>
+								</svg></a>
+						</li>
+						<li><a aria-label="youtube" target="_blank" rel="noopener noreferrer" href="https://youtube.com/">
+								<svg class="icon">
+									<use xlink:href="#icon-youtube"></use>
+								</svg></a>
+						</li>
+						<li><a aria-label="instagram" target="_blank" rel="noopener noreferrer" href="https://instagram.com/">
+								<svg class="icon">
+									<use xlink:href="#icon-instagram"></use>
+								</svg></a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="col-24"><span>© Open Art Studio 2018</span></div>
+
+		</div>
+	</footer>
+
+
+
+	<!-- modal -->
+
+	<div role="dialog" id="dialog-danz1" aria-labelledby="dialog-danz_label" aria-modal="true" class="hidden">
+
+		<div class="col-12 float"><img src="img/img_2.jpg" alt=""></div>
+		<div class="modal_close">
+			<button onclick="closeDialog(this)" class="" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<h3 class="teach__name_modal" id="dialog-danz_label">Слава Красовская</h3>
+		<p>Заслуженный мастер спорта СССР,</p>
+		<p>многократный чемпион Мира,</p>
+		<p>многократный чемпион СССР.</p>
+		<p>Преподаватель Киевской муниципальной академии эстрадного и циркового искусств.</p>
+		<p>Ученики
+			Сергея Петрова — победители и призеры престижных цирковых конкурсов в
+			Париже, Монте-Карло и других фестивалей, а также артисты лучших цирков
+			мира.</p>
+	</div>
+
+	<div role="dialog" id="dialog-danz2" aria-labelledby="dialog-danz_label" aria-modal="true" class="hidden">
+		<div class="col-12 float"><img src="img/img_1.jpg" alt=""></div>
+		<div class="modal_close">
+			<button onclick="closeDialog(this)" class="" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<h3 class="teach__name_modal" id="dialog-danz_label">Слава Красовская</h3>
+		<p>Заслуженный мастер спорта СССР,</p>
+		<p>многократный чемпион Мира,</p>
+		<p>многократный чемпион СССР.</p>
+		<p>Преподаватель Киевской муниципальной академии эстрадного и циркового искусств.</p>
+		<p>Ученики
+			Сергея Петрова — победители и призеры престижных цирковых конкурсов в
+			Париже, Монте-Карло и других фестивалей, а также артисты лучших цирков
+			мира.</p>
+	</div>
+
+
+	  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+	<script src="js/jquery.min.js"></script>
+	<!-- <script src="js/slick.min.js"></script> -->
+	<script src="js/ofi.min.js"></script>
+	<script src="js/utils.js"></script>
+	<script src="js/dialog.js"></script>
+	<!-- <script src="js/swiper.min.js"></script> -->
+	<script src="js/swiper.js"></script>
+	<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+
+	<script src="js/main.js"></script>
 
 
 </body>
