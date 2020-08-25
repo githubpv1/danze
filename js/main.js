@@ -1,11 +1,235 @@
 objectFitImages(); //IE polyfill
 
 
-document.querySelector('.nav__burger').onclick = function () {
+document.querySelector('.btn__more').onclick = function() {
 	this.classList.toggle('active');
-	document.querySelector('.nav').classList.toggle('active');
-	document.querySelector('body').classList.toggle('lock');
 }
+
+
+//сбрасываем :focus при клике для a и button, но оставляем с клавиатуры
+
+function focusLose() {
+	var isMouseDown = false; 
+	var button = document.querySelectorAll('a, button');
+
+	for (let i = 0; i < button.length; i++) {
+		button[i].addEventListener('mousedown', function () {
+			isMouseDown = true;
+		});
+		button[i].addEventListener('mouseup', function () {
+			isMouseDown = false;
+		});
+		button[i].addEventListener('focus', function () {
+			if (isMouseDown) {
+				button[i].blur();
+			}
+		});
+	}
+}
+focusLose();
+
+
+// ===== navigation =====
+
+function nav() {
+
+	var burger = document.querySelector('.nav__burger');
+	var menu = document.querySelector('.nav');
+	var body = document.querySelector('body');
+
+	function close() {
+		// navClose.classList.remove('active');
+		menu.classList.remove('active');
+		burger.classList.remove('active');
+		body.classList.remove('lock');
+	}
+
+	burger.onclick = function () {
+		this.classList.toggle('active');
+		menu.classList.toggle('active');
+		body.classList.toggle('lock');
+	}
+
+
+	// ===== swipe =====
+
+	function swipe(elem) {
+
+		var touchstartX = 0;
+		var touchstartY = 0;
+		var touchendX = 0;
+		var touchendY = 0;
+		var treshold = 10;
+
+
+		elem.addEventListener('touchstart', function (event) {
+			touchstartX = event.changedTouches[0].screenX;
+			touchstartY = event.changedTouches[0].screenY;
+		}, false);
+
+		elem.addEventListener('touchend', function (event) {
+			touchendX = event.changedTouches[0].screenX;
+			touchendY = event.changedTouches[0].screenY;
+			handleGesture();
+		}, false);
+
+		function handleGesture() {
+			var dx = touchendX - touchstartX;
+			var dy = touchendY - touchstartY;
+			var abs_dx = Math.abs(dx);
+			var abs_dy = Math.abs(dy);
+
+
+			if (abs_dx > treshold && abs_dx > abs_dy) {
+				if (dx < 0) {
+					elem.dispatchEvent(new CustomEvent("onSwipeLeft"));
+				} else {
+					elem.dispatchEvent(new CustomEvent("onSwipeRight"));
+				}
+			}
+
+			if (abs_dy > treshold && abs_dy > abs_dx) {
+				if (dy < 0) {
+					elem.dispatchEvent(new CustomEvent("onSwipeUp"));
+				} else {
+					elem.dispatchEvent(new CustomEvent("onSwipeDown"));
+				}
+			}
+		}
+	}
+	swipe(menu);
+	menu.addEventListener("onSwipeUp", close);
+
+	
+
+	// ===== scrollMenu =====
+
+	function scrollMenu(nav, offset, speed, easing) {
+
+		var menu = document.querySelector(nav);
+		var menuHeight;
+		if (offset) { //если есть значение селектора
+			var head = document.querySelector(offset);
+
+			if (head) { //если есть объект по заданному селектору
+				menuHeight = head.clientHeight;
+				// отступ под меню
+				// document.body.style.paddingTop = menuHeight + 'px';
+			} else {
+				menuHeight = 0;
+			}
+		} else {
+			menuHeight = 0;
+		}
+
+		function fncAnimation(callback) {
+			window.setTimeout(callback, 1000 / 60);
+		};
+
+		window.requestAnimFrame = function () {
+			return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || fncAnimation;
+		}();
+
+
+
+		function scrollToY(height, speed, easing) {
+			var scrollTargetY = height || 0;
+			scrollTargetY += 2;
+			var speed = speed || 2000;
+			var easing = easing || 'easeOutSine';
+
+			var scrollY = window.pageYOffset;
+			var currentTime = 0;
+			var time = Math.max(0.1, Math.min(Math.abs(scrollY - scrollTargetY) / speed, 0.8));
+
+			var easingEquations = {
+				easeOutSine: function easeOutSine(pos) {
+					return Math.sin(pos * (Math.PI / 2));
+				},
+				easeInOutSine: function easeInOutSine(pos) {
+					return -0.5 * (Math.cos(Math.PI * pos) - 1);
+				},
+				easeInOutQuint: function easeInOutQuint(pos) {
+					/* eslint-disable-next-line */
+					if ((pos /= 0.5) < 1) {
+						return 0.5 * Math.pow(pos, 5);
+					}
+					return 0.5 * (Math.pow(pos - 2, 5) + 2);
+				}
+			};
+
+			function tick() {
+				currentTime += 1 / 60;
+				var p = currentTime / time;
+				var t = easingEquations[easing](p);
+
+				if (p < 1) {
+					window.requestAnimFrame(tick);
+					window.scrollTo(0, scrollY + (scrollTargetY - scrollY) * t);
+				} else {
+					window.scrollTo(0, scrollTargetY);
+				}
+			}
+
+			tick();
+		};
+
+
+		function menuControl(menu) {
+			var i = void 0;
+			var currLink = void 0;
+			var refElement = void 0;
+			var links = menu.querySelectorAll('a[href^="#"]');
+			var scrollY = window.pageYOffset;
+
+
+			for (i = 0; i < links.length; i += 1) {
+				currLink = links[i];
+				refElement = document.querySelector(currLink.getAttribute('href'));
+
+				var box = refElement.getBoundingClientRect();
+				var topElem = box.top + scrollY - menuHeight;
+
+				if (topElem <= scrollY && topElem + refElement.clientHeight > scrollY) {
+					currLink.classList.add('active');
+				} else {
+					currLink.classList.remove('active');
+				}
+			}
+		};
+
+		function animated(menu, speed, easing) {
+			function control(e) {
+				e.preventDefault();
+
+				var box = document.querySelector(this.hash).getBoundingClientRect();
+				var topElem = box.top + window.pageYOffset;
+				scrollToY(topElem - menuHeight, speed, easing);
+			}
+
+			var i = void 0;
+			var link = void 0;
+			var links = menu.querySelectorAll('a[href^="#"]');
+
+			for (i = 0; i < links.length; i += 1) {
+				link = links[i];
+				link.addEventListener('click', control);
+			}
+		};
+
+		animated(menu, speed, easing);
+		document.addEventListener('scroll', function () {
+			menuControl(menu);
+		});
+	};
+	scrollMenu('.nav', '.head');
+	scrollMenu('.footer__nav', '.head');
+
+}
+nav();
+
+
+
 
 
 var mySwiper = new Swiper('.news__swiper', {
@@ -38,6 +262,51 @@ var mySwiper = new Swiper('.news__swiper', {
 	}
 });
 
+
+
+function showTeach() {
+
+	var btn = $('[data-id]');
+	var teach = $('[data-teach]');
+	var field = $('#teach');
+
+	// var heigh = $('[data-teach=' + idItem + ']').height();
+
+	var btn = $('[data-id]');
+	var teach = $('[data-teach]');
+	var field = $('#teach');
+
+	btn.click(function () {
+		var Top = field.offset().top; //плавная прокрутка к метке 
+		$('html, body').animate({
+			scrollTop: Top - 200
+		}, 500);
+
+		if ($(this).hasClass('show')) { //таже копка
+			$(this).removeClass('show');
+			teach.slideUp(500);
+
+		} else { //не эта
+
+			var id = $(this).attr('data-id');
+			var teachShow = $('[data-teach="' + id + '"]');
+
+			if (btn.hasClass('show')) { //есть активные	
+				btn.removeClass('show');
+				$(this).addClass('show');
+
+				teach.slideUp(500);
+				teachShow.slideDown(500);
+
+			} else { //нет включеных
+
+				$(this).addClass('show');
+				teachShow.slideDown(500);
+			}
+		}
+	});
+}
+showTeach();
 
 
 /* store-gallery */
@@ -165,46 +434,3 @@ function showText() {
 
 
 
-function showTeach() {
-
-	var btn = $('[data-id]');
-	var teach = $('[data-teach]');
-	var field = $('#teach');
-
-	// var heigh = $('[data-teach=' + idItem + ']').height();
-
-	var btn = $('[data-id]');
-	var teach = $('[data-teach]');
-	var field = $('#teach');
-
-	btn.click(function () {
-		var Top = field.offset().top; //плавная прокрутка к метке 
-		$('html, body').animate({
-			scrollTop: Top - 80
-		}, 500);
-
-		if ($(this).hasClass('show')) { //таже копка
-			$(this).removeClass('show');
-			teach.slideUp(500);
-
-		} else { //не эта
-
-			var id = $(this).attr('data-id');
-			var teachShow = $('[data-teach="' + id + '"]');
-
-			if (btn.hasClass('show')) { //есть активные	
-				btn.removeClass('show');
-				$(this).addClass('show');
-
-				teach.slideUp(500);
-				teachShow.slideDown(500);
-
-			} else { //нет включеных
-
-				$(this).addClass('show');
-				teachShow.slideDown(500);
-			}
-		}
-	});
-}
-showTeach();

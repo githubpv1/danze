@@ -8,14 +8,7 @@
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<title>Open Art</title>
-	<!-- <link rel="stylesheet" href="css/normalize.css"> -->
-	<!-- <link rel="stylesheet" href="css/slick.css"> -->
-	<!-- <link rel="stylesheet" href="css/slick-theme.css"> -->
-	<!-- <link rel="stylesheet" href="css/jquery.arcticmodal-0.3.css"> -->
-	<!-- <link rel="stylesheet" href="css/simple.css"> -->
-	<link rel="stylesheet" href="css/dialog.css">
 	<link rel="stylesheet" href="css/custom-bootstrap.css">
-	<!-- <link rel="stylesheet" href="css/swiper.min.css"> -->
 	<link rel="stylesheet" href="css/swiper.css">
 	<!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
 
@@ -23,9 +16,6 @@
 </head>
 
 <body>
-	<!--[if lt IE 9]>
-	<p class="browsehappy container">Вы используете <strong>устаревший</strong> браузер. Пожалуйста, <a href="http://browsehappy.com/">обновите версию вашего браузера</a> для более
-	продуктивной и комфортной работы.</p>  <![endif]-->
 
 	<!-- svg inline -->
 	<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
@@ -57,8 +47,18 @@
 		<symbol id="icon-heart" viewBox="0 0 20 20">
 			<title>heart</title>
 			<path
- d="M9.996185,6.0561523 C7.925049,1.2021484 2.0377197,2.3344727 1.9989319,7.96875 C1.9775391,11.063477 4.8023987,12.220703 6.6832275,13.45752 C8.506958,14.656738 9.804962,16.297852 10.008301,16.99707 C10.182495,16.312012 11.628235,14.624512 13.316467,13.424316 C15.162506,12.11084 18.022156,11.029297 18.000763,7.936035 C17.961731,2.2875977 11.972107,1.3959961 9.996185,6.0561523 Z"/>
+				d="M9.996185,6.0561523 C7.925049,1.2021484 2.0377197,2.3344727 1.9989319,7.96875 C1.9775391,11.063477 4.8023987,12.220703 6.6832275,13.45752 C8.506958,14.656738 9.804962,16.297852 10.008301,16.99707 C10.182495,16.312012 11.628235,14.624512 13.316467,13.424316 C15.162506,12.11084 18.022156,11.029297 18.000763,7.936035 C17.961731,2.2875977 11.972107,1.3959961 9.996185,6.0561523 Z" />
 			</path>
+		</symbol>
+		<symbol id="icon-circle" viewBox="0 0 40 34">
+			<title>circle</title>
+			<g stroke-width="1">
+				<circle stroke="#000" r="16" cx="20" cy="17" />
+				<path stroke="#000" d="M35.726 16.047l3.654-4.642"></path>
+				<path d="M35.775 15.751l-4.099-3.704"></path>
+				<path stroke="#000" d="M4.516 15.948l-3.654 4.198"></path>
+				<path d="M4.417 16.244l3.704 3.605"></path>
+			</g>
 		</symbol>
 
 	</svg>
@@ -66,13 +66,20 @@
 
 
 	<header class="head">
-		<div class=" container-fluid">
+		<div class=" container">
 
 			<div class="head__content">
 				<div class="logo">
 					<img class="logo__img" src="img/logo.png" alt="логотип">
 					<a class="logo__link" href="/" title="на главную"></a>
 				</div>
+				
+				<ul class="head__tel">
+					<li><a href="tel:+38 0443334773"><span> тел.</span> (044) 333-47-73</a></li>
+					<li><a href="tel:+38 0675362625"> <span> моб.</span> (067) 536-26-25</a></li>
+				</ul>
+				
+				
 
 				<button class="nav__burger">
 					<span></span>
@@ -82,12 +89,14 @@
 
 				<nav class="nav">
 					<ul>
-						<li><a class="active" href="#">Расписание</a></li>
-						<li><a href="#creativ">Педагоги</a></li>
-						<li><a href="#">Каталог товаров</a></li>
-						<li><a href="#">Блог</a></li>
+						<li><a class="active" href="#creativ">Педагоги</a></li>
+						<li><a href="#calendar"> Расписание</a></li>
+						<li><a href="#store">Каталог товаров</a></li>
+						<li><a href="#tape">Блог</a></li>
 						<li><a href="#about">О нас</a></li>
 					</ul>
+					
+					<div class="div__swipe"></div>
 				</nav>
 			</div>
 
@@ -97,7 +106,7 @@
 		<main class="main">
 
 			<section class="baner">
-				<div class=" container-fluid">
+				<div class=" container">
 					<div class="baner__row">
 						<div>
 							<h1 class="title_1">Open Art Studio</h1>
@@ -193,143 +202,213 @@
 			</section>
 
 
-<section id="creativ" class="creativ">
-	<div class="container">
+			<section id="creativ" class="creativ">
+				<div class="container">
 
-		<div class="creativ__row">
-			<div class="creativ__item col-md-12">
-				<div class="creativ__item1">
-					<button data-id="5" class="creativ__name">Школа танцев</button>
-				</div>
-			</div>
-
-			<div class="creativ__item col-md-12">
-				<div class="creativ__item2">
-				<button data-id="4" class="creativ__name">Актёрское мастерство</button>
-				</div>
-			</div>
-
-			<div class="creativ__item col-md-8">
-				<div class="creativ__item3">
-				<button data-id="5" class="creativ__name">Вокал</button>
-				</div>
-			</div>
-
-			<div class="creativ__item col-md-8">
-				<div class="creativ__item4">
-				<button data-id="4" class="creativ__name">Акробатика</button>
-				</div>
-			</div>
-
-			<div class="creativ__item col-md-8">
-				<div class="creativ__item5">
-				<button data-id="5" class="creativ__name">Рисование</button>
-				</div>
-			</div>
-		</div>
-
-
-		<div id="teach" class="teach">
-
-			<div data-teach="4" class="teach__item ">
-				<div class="teach-item__row">
-					<h2 class="teach__title col-md-8 ">Педагоги</h2>
-	
-					<div class="col-12 col-sm-8 col-md-4">
-						<a href="#!" onclick="openDialog('dialog-danz1', this)">
-							<div class="teach__name">Слава Красовская ааааааааааа ааааааааа</div>
-							<div class="teach__prof">Contemporary</div>
-							<div class="teach__img-wrap">
-								<img src="img/img_5.jpg" alt="" class="img_cover">
+					<div class="creativ__row">
+						<div class="creativ__item col-md-12">
+							<div class="creativ__item1">
+								<button data-id="5" class="creativ__name">Школа танцев</button>
 							</div>
-						</a>
-					</div>
-					<div class="col-12 col-sm-8 col-md-4">
-						<a href="#!" onclick="openDialog('dialog-danz2', this)">
-							<div class="teach__name">Слава Красовская</div>
-							<div class="teach__prof">Contemporary</div>
-							<div class="teach__img-wrap">
-								<img src="img/img_1.jpg" alt="" class="img_cover">
+						</div>
+
+						<div class="creativ__item col-md-12">
+							<div class="creativ__item2">
+							<button data-id="4" class="creativ__name">Актёрское мастерство</button>
 							</div>
-						</a>
-					</div>
-				</div>
-			</div>
+						</div>
 
-			<div data-teach="5" class="teach__item ">
-				<div class="teach-item__row">
-					<h2 class="teach__title col-md-8 ">Педагоги</h2>
-					<div class="col-12 col-sm-8 col-md-4">
-						<a href="#!" onclick="openDialog('dialog-danz1', this)">
-							<div class="teach__name">Слава Красовская</div>
-							<div class="teach__prof">Contemporary</div>
-							<div class="teach__img-wrap">
-								<img src="img/img_4.jpg" alt="" class="img_cover">
+						<div class="creativ__item col-md-8">
+							<div class="creativ__item3">
+							<button data-id="5" class="creativ__name">Вокал</button>
 							</div>
-						</a>
+						</div>
+
+						<div class="creativ__item col-md-8">
+							<div class="creativ__item4">
+							<button data-id="4" class="creativ__name">Акробатика</button>
+							</div>
+						</div>
+
+						<div class="creativ__item col-md-8">
+							<div class="creativ__item5">
+							<button data-id="5" class="creativ__name">Рисование</button>
+							</div>
+						</div>
 					</div>
+
+
+					<div id="teach" class="teach">
+
+						<div data-teach="4" class="teach__item ">
+							<div class="teach-item__row">
+								<h2 class="teach__title col-md-8 ">Педагоги</h2>
+				
+								<div class="col-12 col-sm-8 col-md-4">
+									<a href="#!" onclick="openDialog('dialog-danz1', this)">
+										<div class="teach__name">Слава Красовская ааааааааааа ааааааааа</div>
+										<div class="teach__prof">Contemporary</div>
+										<div class="teach__img-wrap">
+											<img src="img/img_5.jpg" alt="" class="img_cover">
+										</div>
+									</a>
+								</div>
+								<div class="col-12 col-sm-8 col-md-4">
+									<a href="#!" onclick="openDialog('dialog-danz2', this)">
+										<div class="teach__name">Слава Красовская</div>
+										<div class="teach__prof">Contemporary</div>
+										<div class="teach__img-wrap">
+											<img src="img/img_1.jpg" alt="" class="img_cover">
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div data-teach="5" class="teach__item ">
+							<div class="teach-item__row">
+								<h2 class="teach__title col-md-8 ">Педагоги</h2>
+								<div class="col-12 col-sm-8 col-md-4">
+									<a href="#!" onclick="openDialog('dialog-danz1', this)">
+										<div class="teach__name">Слава Красовская</div>
+										<div class="teach__prof">Contemporary</div>
+										<div class="teach__img-wrap">
+											<img src="img/img_4.jpg" alt="" class="img_cover">
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+
+
+
+
+
 				</div>
-			</div>
+			</section>
 
-		</div>
+    
 
-
-
-
-
-
-	</div>
-</section>
-
-
-
-			<section class="calendar">
+			<section id="calendar" class="calendar">
 				<div class="container">
 					<div class="row">
-						<select>
-							<option value="">все дни</option>
-							<option value="">пн</option>
-							<option value="">вт</option>
-							<option value="">ср</option>
-						</select>
-						<select class="all-styles">
-							<option value="all-styles" selected="selected">Все стили</option>
-							<option value="Juzz-funk">Juzz-funk</option>
-							<option value="Вокал">Вокал</option>
-							<option value="Детки">Детки</option>
-							<option value="Hip-hop">Hip-hop</option>
-							<option value="Гитара">Гитара</option>
-							<option value="Contemperary">Contemperary</option>
-							<option value="Vogue">Vogue</option>
-							<option value="Детская хореография">Детская хореография</option>
-							<option value="Акробатика">Акробатика</option>
-							<option value="Актерское мастерство">Актерское мастерство</option>
-							<option value="Хореография">Хореография</option>
-						</select>
-						<select class="all-category">
-							<option value="all-category" selected="selected">Категории</option>
-							<option value="3-5 лет">3-5 лет</option>
-							<option value="4-5 лет">4-5 лет</option>
-							<option value="5-7 лет">5-7 лет</option>
-							<option value="от 6 лет">от 6 лет</option>
-							<option value="6-7 лет">6-7 лет</option>
-							<option value="от 7 лет">от 7 лет</option>
-							<option value="7-11 лет">7-11 лет</option>
-							<option value="от 8 лет">от 8 лет</option>
-							<option value="от 11 лет">от 11 лет</option>
-							<option value="от 12 лет">от 12 лет</option>
-							<option value="18+">18+</option>
-						</select>
-					</div>
-					<div class=" table-head">
-						<div class="col-3">Дни группы</div>
-						<div class="col-2">Начало</div>
-						<div class="col-2">Конец</div>
-						<div class="col-3">Стиль</div>
-						<div class="col-3">Категории</div>
-						<div class="col-5">Педагоги</div>
-						<div class="col-3">Уровень</div>
-						<div class="col-2">Зал</div>
+
+						<div class="col-24">
+							<div class="title_2">Календарь занятий</div>
+						</div>
+
+						<div class="col-24 calendar__wrap">
+							<form id="form" action="#" method="post" enctype="multipart/form-data">
+								<div class="col-3 col_days">
+									<select class="all-days">
+										<option value="">Все дни</option>
+										<option value="">пн</option>
+										<option value="">вт</option>
+										<option value="">ср</option>
+									</select>
+								</div>
+								<div class="col-3 col_styles">
+									<select class="all-styles">
+										<option value="all-styles" selected="selected">Все стили</option>
+										<option value="Juzz-funk">Juzz-funk</option>
+										<option value="Вокал">Вокал</option>
+										<option value="Детки">Детки</option>
+										<option value="Hip-hop">Hip-hop</option>
+										<option value="Гитара">Гитара</option>
+										<option value="Contemperary">Contemperary</option>
+										<option value="Vogue">Vogue</option>
+										<option value="Детская хореография">Детская хореография</option>
+										<option value="Акробатика">Акробатика</option>
+										<option value="Актерское мастерство">Актерское мастерство</option>
+										<option value="Хореография">Хореография</option>
+									</select>
+								</div>
+								<div class="col-3 col_category">
+									<select class="all-category">
+										<option value="all-category" selected="selected">Категории</option>
+										<option value="3-5 лет">3-5 лет</option>
+										<option value="4-5 лет">4-5 лет</option>
+										<option value="5-7 лет">5-7 лет</option>
+										<option value="от 6 лет">от 6 лет</option>
+										<option value="6-7 лет">6-7 лет</option>
+										<option value="от 7 лет">от 7 лет</option>
+										<option value="7-11 лет">7-11 лет</option>
+										<option value="от 8 лет">от 8 лет</option>
+										<option value="от 11 лет">от 11 лет</option>
+										<option value="от 12 лет">от 12 лет</option>
+										<option value="18+">18+</option>
+									</select>
+								</div>
+								<div class="col-3 col_teach">
+									<select class="all-teach">
+										<option value="">Все педагоги</option>
+										<option value="">пн</option>
+										<option value="">вт</option>
+										<option value="">ср</option>
+									</select>
+								</div>
+								<div class="col-3 col_level">
+									<select class="all-level">
+										<option value="">Все уровни</option>
+										<option value="">пн</option>
+										<option value="">вт</option>
+										<option value="">ср</option>
+									</select>
+								</div>
+
+							</form>
+
+							<table class="">
+								<thead>
+									<tr>
+										<th scope="col">Дни группы</th>
+										<th scope="col">Начало</th>
+										<th scope="col">Конец</th>
+										<th scope="col">Стиль</th>
+										<th scope="col">Категории</th>
+										<th scope="col">Педагог</th>
+										<th scope="col">Уровень</th>
+										<th scope="col">Зал</th>
+										<th scope="col"> </th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Пн, Чт</td>
+										<td>17:00</td>
+										<td>18:00</td>
+										<td>hip-hop</td>
+										<td>top</td>
+										<td>Василевская Анастасия</td>
+										<td>продвинутый</td>
+										<td>А</td>
+										<td><img class="link" src="img/arr.png" alt=""></td>
+									</tr>
+									<tr>
+										<td>Пн, Чт</td>
+										<td>17:00</td>
+										<td>18:00</td>
+										<td>hip-hop</td>
+										<td>top</td>
+										<td>Василевская Анастасия</td>
+										<td>продвинутый</td>
+										<td>А</td>
+										<td><img class="link" src="img/arr.png" alt=""></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="col-24 calendar__col_more">
+							<button class="btn__more" aria-label="more">ещё 17
+									<svg class="circle_icon icon" aria-hidden="true">
+										<use xlink:href="#icon-circle"></use>
+									</svg>
+							</button>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -442,8 +521,8 @@
 			</section>
 
 
-			<section class="tape">
-				<div class="row">
+			<section id="tape" class="tape">
+				<div class="tape__row">
 					<div class="tape__col">
 						<div class="tape__item">
 							<div class="tape__wrap_img ">
@@ -846,10 +925,10 @@
 				<div class="col-xl-auto  footer__col_nav">
 					<nav>
 						<ul class="footer__nav">
-							<li><a href="#">Расписание</a></li>
-							<li><a href="#">Педагоги</a></li>
-							<li><a href="#">Каталог товаров</a></li>
-							<li><a href="#">Блог</a></li>
+							<li><a href="#creativ">Педагоги</a></li>
+							<li><a href="#calendar">Расписание</a></li>
+							<li><a href="#store">Каталог товаров</a></li>
+							<li><a href="#tape">Блог</a></li>
 							<li><a href="#about">О нас</a></li>
 						</ul>
 					</nav>
@@ -888,8 +967,13 @@
 	<!-- modal -->
 
 	<div role="dialog" id="dialog-danz1" aria-labelledby="dialog-danz_label" aria-modal="true" class="hidden">
+		<div class="modal__content">
 
-		<div class="col-12 float"><img src="img/img_2.jpg" alt=""></div>
+			<div class="col-12 modal__col_img">
+				<div class=" modal__wrap_img">
+					<img class="img_cover" src="img/img_2.jpg" alt="">
+				</div>
+			</div>
 		<div class="modal_close">
 			<button onclick="closeDialog(this)" class="" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
@@ -904,10 +988,24 @@
 			Сергея Петрова — победители и призеры престижных цирковых конкурсов в
 			Париже, Монте-Карло и других фестивалей, а также артисты лучших цирков
 			мира.</p>
+		<p>Заслуженный мастер спорта СССР,</p>
+		<p>многократный чемпион Мира,</p>
+		<p>многократный чемпион СССР.</p>
+		<p>Преподаватель Киевской муниципальной академии эстрадного и циркового искусств.</p>
+		<p>Ученики
+			Сергея Петрова — победители и призеры престижных цирковых конкурсов в
+			Париже, Монте-Карло и других фестивалей, а также артисты лучших цирков
+			мира.</p>
+		</div>
 	</div>
 
 	<div role="dialog" id="dialog-danz2" aria-labelledby="dialog-danz_label" aria-modal="true" class="hidden">
-		<div class="col-12 float"><img src="img/img_1.jpg" alt=""></div>
+		<div class="modal__content">
+		<div class="col-12 modal__col_img">
+			<div class=" modal__wrap_img">
+				<img class="img_cover" src="img/img_3.jpg" alt="">
+			</div>
+		</div>
 		<div class="modal_close">
 			<button onclick="closeDialog(this)" class="" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
@@ -922,17 +1020,16 @@
 			Сергея Петрова — победители и призеры престижных цирковых конкурсов в
 			Париже, Монте-Карло и других фестивалей, а также артисты лучших цирков
 			мира.</p>
+	  </div>
 	</div>
 
 
 	  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 	<script src="js/jquery.min.js"></script>
-	<!-- <script src="js/slick.min.js"></script> -->
 	<script src="js/ofi.min.js"></script>
-	<script src="js/utils.js"></script>
-	<script src="js/dialog.js"></script>
-	<!-- <script src="js/swiper.min.js"></script> -->
-	<script src="js/swiper.js"></script>
+	<script src="js/utils.min.js"></script>
+	<script src="js/dialog.min.js"></script>
+	<script src="js/swiper.min.js"></script>
 	<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 
 	<script src="js/main.js"></script>
