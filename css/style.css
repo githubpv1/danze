@@ -141,7 +141,8 @@ body.lock {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	object-fit: cover;
+	-o-object-fit: cover;
+	   object-fit: cover;
 	font-family: 'object-fit: cover;';
 }
 
@@ -1067,7 +1068,18 @@ td {
 }
 
 .btn__more.active .circle_icon {
-	animation: rotation 5s infinite linear;
+	-webkit-animation: rotation 5s infinite linear;
+	        animation: rotation 5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 @keyframes rotation {
@@ -1569,7 +1581,8 @@ td {
 		position: absolute;
 		height: 100%;
 		width: 100%;
-		object-fit: cover;
+		-o-object-fit: cover;
+		   object-fit: cover;
 		font-family: 'object-fit: cover;';
 	}
 

@@ -341,6 +341,7 @@ var mySwiper = new Swiper('.video__swiper', {
 	slidesPerView: 1,
 	loop: true,
 	grabCursor: true,
+	breakpointsInverse: true,
 	navigation: {
 		nextEl: '.video__btn_next',
 		prevEl: '.video__btn_prev',
