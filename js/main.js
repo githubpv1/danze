@@ -1,9 +1,15 @@
 objectFitImages(); //IE polyfill
 
+function more() {
+	var el = document.querySelector('.btn__more');
 
-document.querySelector('.btn__more').onclick = function() {
-	this.classList.toggle('active');
+	if (el) {
+		el.onclick = function () {
+			this.classList.toggle('active');
+		}
+	}
 }
+more();
 
 
 //сбрасываем :focus при клике для a и button, но оставляем с клавиатуры
@@ -182,18 +188,19 @@ function nav() {
 			var links = menu.querySelectorAll('a[href^="#"]');
 			var scrollY = window.pageYOffset;
 
-
 			for (i = 0; i < links.length; i += 1) {
 				currLink = links[i];
 				refElement = document.querySelector(currLink.getAttribute('href'));
+				if (refElement) {
+					var box = refElement.getBoundingClientRect();
 
-				var box = refElement.getBoundingClientRect();
-				var topElem = box.top + scrollY - menuHeight;
+					var topElem = box.top + scrollY - menuHeight;
 
-				if (topElem <= scrollY && topElem + refElement.clientHeight > scrollY) {
-					currLink.classList.add('active');
-				} else {
-					currLink.classList.remove('active');
+					if (topElem <= scrollY && topElem + refElement.clientHeight > scrollY) {
+						currLink.classList.add('active');
+					} else {
+						currLink.classList.remove('active');
+					}
 				}
 			}
 		};
@@ -201,10 +208,12 @@ function nav() {
 		function animated(menu, speed, easing) {
 			function control(e) {
 				e.preventDefault();
-
-				var box = document.querySelector(this.hash).getBoundingClientRect();
-				var topElem = box.top + window.pageYOffset;
-				scrollToY(topElem - menuHeight, speed, easing);
+				var elem = document.querySelector(this.hash);
+				if (elem) {
+					var box = elem.getBoundingClientRect();
+					var topElem = box.top + window.pageYOffset;
+					scrollToY(topElem - menuHeight, speed, easing);
+				}
 			}
 
 			var i = void 0;
@@ -385,12 +394,13 @@ var mySwiper_reviews = new Swiper('.reviews__swiper', {
 function addSlide() {
 	if (window.innerWidth > 1199) {
 		var el = document.querySelector('.reviews__swiper');
-		var elem = el.querySelectorAll('.swiper-slide');
-
-		if (elem.length % 2 == 0) {
-			var wrap = document.querySelector('.reviews__swiper_wrapper');
-			wrap.insertAdjacentHTML('beforeEnd', '<div class="swiper-slide"></div>');
-			mySwiper_reviews.update();
+		if (el) {
+			var elem = el.querySelectorAll('.swiper-slide');
+			if (elem.length % 2 == 0) {
+				var wrap = document.querySelector('.reviews__swiper_wrapper');
+				wrap.insertAdjacentHTML('beforeEnd', '<div class="swiper-slide"></div>');
+				mySwiper_reviews.update();
+			}
 		}
 	}
 }
@@ -432,5 +442,47 @@ function showText() {
 // showText();
 
 
+// ===== article =====
 
 
+var mySwiper = new Swiper('.art__swiper', { 
+  autoHeight: true,
+	grabCursor: true,
+	navigation: {
+		nextEl: '.art__btn_next',
+		prevEl: '.art__btn_prev',
+	},
+})
+
+
+
+function showTitle() {
+	var swiper = document.querySelector('.art__swiper');
+	if (swiper) {
+		var prevBtn = document.querySelector('.art__btn_prev');
+		var nextBtn = document.querySelector('.art__btn_next');
+
+		function funk(sw, prev, next) {
+			var prevSlide = sw.querySelector('.swiper-slide-prev');
+			if (prevSlide) {
+				var prevTitle = prevSlide.querySelector('.art__title').textContent;
+				prev.querySelector('[data-prev]').textContent = prevTitle;
+			} else {
+				prev.querySelector('[data-prev]').textContent = '';
+			}
+			var nextSlide = sw.querySelector('.swiper-slide-next');
+			if (nextSlide) {
+				var nextTitle = nextSlide.querySelector('.art__title').textContent;
+				next.querySelector('[data-next]').textContent = nextTitle;
+			} else {
+				next.querySelector('[data-next]').textContent = '';
+			}
+		}
+
+		funk(swiper, prevBtn, nextBtn);
+
+		prevBtn.addEventListener('click', funk.bind(null, swiper, prevBtn, nextBtn));
+		nextBtn.addEventListener('click', funk.bind(null, swiper, prevBtn, nextBtn));
+	}
+}
+showTitle();
