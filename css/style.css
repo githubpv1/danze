@@ -478,6 +478,10 @@ body.lock {
 	transform: translate(-50%, 0px);
 }
 
+.nav a.active::after {
+	width: 100%;
+}
+
 .div__swipe {
 	margin-left: auto;
 	margin-right: auto;
