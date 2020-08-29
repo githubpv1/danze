@@ -492,3 +492,20 @@ function showTitle() {
 	}
 }
 showTitle();
+
+
+var menu = document.querySelector(nav);
+var menuHeight;
+if (offset) { //если есть значение селектора
+	var head = document.querySelector(offset);
+
+	if (head) { //если есть объект по заданному селектору
+		menuHeight = head.clientHeight;
+		// отступ под меню
+		// document.body.style.paddingTop = menuHeight + 'px';
+	} else {
+		menuHeight = 0;
+	}
+} else {
+	menuHeight = 0;
+}
