@@ -12,27 +12,32 @@ function more() {
 more();
 
 
+
 //сбрасываем :focus при клике для a и button, но оставляем с клавиатуры
 
 function focusLose() {
-	var isMouseDown = false; 
+	var isMouseDown = false;
 	var button = document.querySelectorAll('a, button');
 
-	for (let i = 0; i < button.length; i++) {
-		button[i].addEventListener('mousedown', function () {
+	function func() {
+		if (isMouseDown) {
+			this.blur();
+		}
+	}
+
+	for (var i = 0; i < button.length; i++) {
+		var el = button[i];
+		el.addEventListener('mousedown', function () {
 			isMouseDown = true;
 		});
-		button[i].addEventListener('mouseup', function () {
+		el.addEventListener('mouseup', function () {
 			isMouseDown = false;
 		});
-		button[i].addEventListener('focus', function () {
-			if (isMouseDown) {
-				button[i].blur();
-			}
-		});
+		el.addEventListener('focus', func.bind(el));
 	}
 }
 focusLose();
+
 
 
 // ===== navigation =====
