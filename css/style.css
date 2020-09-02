@@ -146,6 +146,10 @@ body.lock {
 	font-family: 'object-fit: cover;';
 }
 
+.d-block {
+	display: block;
+}
+
 .main {
 	margin-top: 70px;
 }
