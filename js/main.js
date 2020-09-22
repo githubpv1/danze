@@ -1,4 +1,4 @@
-objectFitImages(); //IE polyfill
+objectFitImages(); 
 
 function more() {
 	var el = document.querySelector('.btn__more');
@@ -16,37 +16,36 @@ more();
 //сбрасываем :focus при клике для a и button, но оставляем с клавиатуры
 
 
-function focusLose() {
-	var isMouseDown = false;
-	var button = document.querySelectorAll('a, button');
-	var isDialog = document.querySelector('[role="dialog"]');
+(function () {
+  var isMouseDown = false;
+  var button = document.querySelectorAll('a, button');
+  var isDialog = document.querySelector('[role="dialog"]');
 
-	function func() {
-		if (isMouseDown) {
-			this.blur();
-		}
-	}
+  function func() {
+    if (isMouseDown) {
+      this.blur();
+    }
+  }
 
-	for (var i = 0; i < button.length; i++) {
-		var el = button[i];
-		el.addEventListener('mousedown', function () {
-			isMouseDown = true;
-			if (isDialog) {
-				isKeyClick = false;
-			}
-		});
-		el.addEventListener('mouseup', function () {
-			isMouseDown = false;
-		});
-		if (isDialog) {
-			el.addEventListener('keydown', function () {
-				isKeyClick = true;
-			});
-		}
-		el.addEventListener('focus', func.bind(el));
-	}
-}
-focusLose();
+  for (var i = 0; i < button.length; i++) {
+    var el = button[i];
+    el.addEventListener('mousedown', function () {
+      isMouseDown = true;
+      if (isDialog) {
+        isKeyClick = false;
+      }
+    });
+    el.addEventListener('mouseup', function () {
+      isMouseDown = false;
+    });
+    if (isDialog) {
+      el.addEventListener('keydown', function () {
+        isKeyClick = true;
+      });
+    }
+    el.addEventListener('focus', func.bind(el));
+  }
+}());
 
 
 
