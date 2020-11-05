@@ -392,7 +392,7 @@ var mySwiper_reviews = new Swiper('.reviews__swiper', {
 			spaceBetween: 20,
 			slidesPerColumn: 2,
 			slidesPerView: 2
-		},
+		}
 	},
 	pagination: {
 		el: '.rewiews__swiper_pagination',
@@ -422,6 +422,7 @@ function addSlide() {
 addSlide();
 
 
+
 /* reviews jQery */
 
 function showText1() {
@@ -434,7 +435,7 @@ function showText1() {
 		$('[data-text=' + text + ']').css("display", "block");
 	});
 }
-showText1();
+// showText1();
 
 /* reviews js */
 
@@ -454,11 +455,12 @@ function showText() {
 		}
 	}
 }
-// showText();
+showText();
+
+
 
 
 // ===== article =====
-
 
 var mySwiper = new Swiper('.art__swiper', { 
   autoHeight: true,
