@@ -14,7 +14,7 @@
 
 <body>
 
-	
+
 	<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
 
 		<symbol id="icon-facebook" viewBox="0 0 16 28">
@@ -61,9 +61,9 @@
 	</svg>
 
 
-	
 
-	<header class="head">
+
+	<header class="head" data-lock>
 		<div class=" container">
 
 			<div class="head__content">
@@ -71,13 +71,13 @@
 					<img class="logo__img" src="img/logo.png" alt="логотип">
 					<a class="logo__link" href="/" title="на главную"></a>
 				</div>
-				
+
 				<ul class="head__tel">
 					<li><a href="tel:+38 0443334773"><span> тел.</span> (044) 333-47-73</a></li>
 					<li><a href="tel:+38 0675362625"> <span> моб.</span> (067) 536-26-25</a></li>
 				</ul>
-				
-				
+
+
 
 				<button class="nav__burger">
 					<span></span>
@@ -93,7 +93,7 @@
 						<li><a href="#tape">Блог</a></li>
 						<li><a href="#about">О нас</a></li>
 					</ul>
-					
+
 					<div class="div__swipe"></div>
 				</nav>
 			</div>
@@ -119,14 +119,14 @@
 		</section>
 
 
-		<section class="news">
+		<section class="news section">
 			<div class="container">
 				<div class="news__row">
 
 					<div class="news__swiper swiper-container">
 						<div class="news__wrapper swiper-wrapper">
 							<div class="news__slide swiper-slide">
-								<a class="" target="_blank" href="article.html">
+								<a class="" href="article.html">
 									<div class="news__wrap_img">
 										<img class="img_cover" src="img/img_news1.jpg" alt="">
 									</div>
@@ -138,7 +138,7 @@
 							</div>
 
 							<div class="news__slide swiper-slide">
-								<a class="" target="_blank" href="article.html">
+								<a class="" href="article.html">
 									<div class="news__wrap_img">
 										<img class="img_cover" src="img/img_news2.jpg" alt="">
 									</div>
@@ -150,7 +150,7 @@
 							</div>
 
 							<div class="news__slide swiper-slide">
-								<a class="" target="_blank" href="article.html">
+								<a class="" href="article.html">
 									<div class="news__wrap_img">
 										<img class="img_cover" src="img/img_news3.jpg" alt="">
 									</div>
@@ -162,7 +162,7 @@
 							</div>
 
 							<div class="news__slide swiper-slide">
-								<a class="" target="_blank" href="article.html">
+								<a class="" href="article.html">
 									<div class="news__wrap_img">
 										<img class="img_cover" src="img/img_news4.jpg" alt="">
 									</div>
@@ -174,7 +174,7 @@
 							</div>
 
 							<div class="news__slide swiper-slide">
-								<a class="" target="_blank" href="article.html">
+								<a class="" href="article.html">
 									<div class="news__wrap_img">
 										<img class="img_cover" src="img/img_news2.jpg" alt="">
 									</div>
@@ -194,13 +194,13 @@
 						<button class="news__btn_next btn_next" aria-label="Next">
 						</button>
 					</div>
-					
+
 				</div>
 			</div>
 		</section>
 
 
-		<section id="creativ" class="creativ">
+		<section id="creativ" class="creativ section">
 			<div class="container">
 
 				<div class="creativ__row">
@@ -212,25 +212,25 @@
 
 					<div class="creativ__item col-md-12">
 						<div class="creativ__item2">
-						<button data-id="4" class="creativ__name">Актёрское мастерство</button>
+							<button data-id="4" class="creativ__name">Актёрское мастерство</button>
 						</div>
 					</div>
 
 					<div class="creativ__item col-md-8">
 						<div class="creativ__item3">
-						<button data-id="5" class="creativ__name">Вокал</button>
+							<button data-id="5" class="creativ__name">Вокал</button>
 						</div>
 					</div>
 
 					<div class="creativ__item col-md-8">
 						<div class="creativ__item4">
-						<button data-id="4" class="creativ__name">Акробатика</button>
+							<button data-id="4" class="creativ__name">Акробатика</button>
 						</div>
 					</div>
 
 					<div class="creativ__item col-md-8">
 						<div class="creativ__item5">
-						<button data-id="5" class="creativ__name">Рисование</button>
+							<button data-id="5" class="creativ__name">Рисование</button>
 						</div>
 					</div>
 				</div>
@@ -241,7 +241,7 @@
 					<div data-teach="4" class="teach__item ">
 						<div class="teach-item__row">
 							<h2 class="teach__title col-md-8 ">Педагоги</h2>
-			
+
 							<div class="col-12 col-sm-8 col-md-4">
 								<a href="#!" onclick="openDialog('dialog-danz1', this)">
 									<div class="teach__name">Слава Красовская ааааааааааа ааааааааа</div>
@@ -288,7 +288,7 @@
 			</div>
 		</section>
 
-	
+
 
 		<section id="calendar" class="calendar">
 			<div class="container">
@@ -402,7 +402,7 @@
 
 					<div class="col-24 calendar__col_more">
 						<button class="btn__more" aria-label="more">ещё 17
-								<svg class="circle_icon icon" aria-hidden="true">
+							<svg class="circle_icon icon" aria-hidden="true">
 									<use xlink:href="#icon-circle"></use>
 								</svg>
 						</button>
@@ -418,7 +418,7 @@
 		</section>
 
 
-		<section id="store" class=" store">
+		<section id="store" class=" store section">
 			<div class="container">
 
 				<div class="store__swiper swiper-container">
@@ -431,7 +431,8 @@
 								</div>
 								<div class="store__desc">
 									<div class="store__title">Браслеты open big <br>
-										<span>Белые и черные браслеты с логотипом Open Art Studio</span></div>
+										<span>Белые и черные браслеты с логотипом Open Art Studio</span>
+									</div>
 									<div class="store__text">60₴</div>
 								</div>
 							</a>
@@ -444,7 +445,8 @@
 								</div>
 								<div class="store__desc">
 									<div class="store__title">Браслеты open <br>
-										<span>Белые и черные браслеты разных размеров с логотипом Open Art Studio</span></div>
+										<span>Белые и черные браслеты разных размеров с логотипом Open Art Studio</span>
+									</div>
 									<div class="store__text">30₴</div>
 								</div>
 							</a>
@@ -457,7 +459,8 @@
 								</div>
 								<div class="store__desc">
 									<div class="store__title">Эко ручки open art studio и open kids <br>
-										<span>Эко ручки Open Art Studio и Open Kids</span></div>
+										<span>Эко ручки Open Art Studio и Open Kids</span>
+									</div>
 									<div class="store__text">25₴</div>
 								</div>
 							</a>
@@ -470,8 +473,9 @@
 								</div>
 								<div class="store__desc">
 									<div class="store__title">Худи «поколение танцы» <br>
-										<span>Худи «Поколение танцы» два цвета, размеры 
-											S, M, L</span></div>
+										<span>Худи «Поколение танцы» два цвета, размеры
+											S, M, L</span>
+									</div>
 									<div class="store__text">850₴</div>
 								</div>
 							</a>
@@ -484,8 +488,9 @@
 								</div>
 								<div class="store__desc">
 									<div class="store__title">Штаны «поколение танцы»<br>
-										<span>Штаны «Поколение танцы» два цвета, размеры 
-											S, M, L</span></div>
+										<span>Штаны «Поколение танцы» два цвета, размеры
+											S, M, L</span>
+									</div>
 									<div class="store__text">1200₴</div>
 								</div>
 							</a>
@@ -498,7 +503,8 @@
 								</div>
 								<div class="store__desc">
 									<div class="store__title">Футболка «поколение танцы» <br>
-										<span>Футболка «Поколение танцы», размеры S, M, L</span></div>
+										<span>Футболка «Поколение танцы», размеры S, M, L</span>
+									</div>
 									<div class="store__text">450₴</div>
 								</div>
 							</a>
@@ -600,9 +606,9 @@
 
 			</div>
 		</section>
-		
-	
-		<section class="video">
+
+
+		<section class="video section">
 			<div class="container">
 				<div class="row">
 
@@ -769,7 +775,7 @@
 							<div class="about__col_8 col-md-11 col-xl-24 order-1 order-md-0 order-xl-0">
 								<img src="img/img_about5.jpg" alt="" class="about__img5 ">
 							</div>
-							
+
 							<div class="col-md-13 col-xl-24 ">
 								<h3 class="title_3">DETKI Crew</h3>
 								<p>DETKI – новый вокально-хореографический проект от Яны Петровой и Open Art Studio.</p>
@@ -799,7 +805,7 @@
 
 
 
-		<section class="reviews">
+		<section class="reviews section">
 			<div class="container">
 				<div class="row reviews__row">
 
@@ -823,7 +829,10 @@
 						<div data-text="2" class="reviews__text">
 							<div class="">Саша Красовская </div>
 							<div class="">Кто-то такая</div>
-							<p class="">“Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus officia suscipit id illum quis accusamus, possimus quibusdam quidem, blanditiis fuga perferendis? Reprehenderit omnis unde voluptatem excepturi iusto deleniti. Ipsum itaque ducimus dolorem blanditiis fuga. Asperiores optio nam quas provident accusantium! “</p>
+							<p class="">“Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus officia suscipit id
+								illum quis accusamus, possimus quibusdam quidem, blanditiis fuga perferendis? Reprehenderit omnis unde
+								voluptatem excepturi iusto deleniti. Ipsum itaque ducimus dolorem blanditiis fuga. Asperiores optio nam
+								quas provident accusantium! “</p>
 						</div>
 						<div data-text="3" class="reviews__text">
 							<div class="">Петя Красовская </div>
@@ -838,7 +847,7 @@
 						</div>
 					</div>
 
-					
+
 					<div class=" col-md-16 col-xl-8">
 
 						<div class="reviews__wrap_swiper">
@@ -875,7 +884,7 @@
 											<img data-id_img="4" src="img/img_6.jpg" alt="" class="img_cover">
 										</a>
 									</div>
-									
+
 								</div>
 							</div>
 						</div>
@@ -909,7 +918,7 @@
 						<li>м. Позняки</li>
 					</ul>
 				</div>
-				
+
 				<div class="col-md-11 col-xl-7 footer__item ">
 					<span class="">Контакты:</span>
 					<ul class="">
@@ -963,65 +972,69 @@
 
 	<!-- modal -->
 
-	<div role="dialog" id="dialog-danz1" aria-labelledby="dialog-danz_label" aria-modal="true" class="hidden">
-		<div class="modal__content">
+	<div class="dialog-backdrop" onclick="clickBtnClose(this)">
+		<div class="modal" id="dialog-danz1" role="dialog" aria-labelledby="dialog-danz_label" aria-modal="true">
+			<div class="modal__content">
 
-			<div class="col-12 modal__col_img">
-				<div class=" modal__wrap_img">
-					<img class="img_cover" src="img/img_2.jpg" alt="">
+				<div class="col-12 modal__col_img">
+					<div class=" modal__wrap_img">
+						<img class="img_cover" src="img/img_2.jpg" alt="">
+					</div>
 				</div>
+				<div class="modal_close">
+					<button onclick="closeDialog(this)" class="" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<h3 class="teach__name_modal" id="dialog-danz_label">Слава Красовская</h3>
+				<p>Заслуженный мастер спорта СССР,</p>
+				<p>многократный чемпион Мира,</p>
+				<p>многократный чемпион СССР.</p>
+				<p>Преподаватель Киевской муниципальной академии эстрадного и циркового искусств.</p>
+				<p>Ученики
+					Сергея Петрова — победители и призеры престижных цирковых конкурсов в
+					Париже, Монте-Карло и других фестивалей, а также артисты лучших цирков
+					мира.</p>
+				<p>Заслуженный мастер спорта СССР,</p>
+				<p>многократный чемпион Мира,</p>
+				<p>многократный чемпион СССР.</p>
+				<p>Преподаватель Киевской муниципальной академии эстрадного и циркового искусств.</p>
+				<p>Ученики
+					Сергея Петрова — победители и призеры престижных цирковых конкурсов в
+					Париже, Монте-Карло и других фестивалей, а также артисты лучших цирков
+					мира.</p>
 			</div>
-		<div class="modal_close">
-			<button onclick="closeDialog(this)" class="" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			</button>
-		</div>
-		<h3 class="teach__name_modal" id="dialog-danz_label">Слава Красовская</h3>
-		<p>Заслуженный мастер спорта СССР,</p>
-		<p>многократный чемпион Мира,</p>
-		<p>многократный чемпион СССР.</p>
-		<p>Преподаватель Киевской муниципальной академии эстрадного и циркового искусств.</p>
-		<p>Ученики
-			Сергея Петрова — победители и призеры престижных цирковых конкурсов в
-			Париже, Монте-Карло и других фестивалей, а также артисты лучших цирков
-			мира.</p>
-		<p>Заслуженный мастер спорта СССР,</p>
-		<p>многократный чемпион Мира,</p>
-		<p>многократный чемпион СССР.</p>
-		<p>Преподаватель Киевской муниципальной академии эстрадного и циркового искусств.</p>
-		<p>Ученики
-			Сергея Петрова — победители и призеры престижных цирковых конкурсов в
-			Париже, Монте-Карло и других фестивалей, а также артисты лучших цирков
-			мира.</p>
 		</div>
 	</div>
 
-	<div role="dialog" id="dialog-danz2" aria-labelledby="dialog-danz_label" aria-modal="true" class="hidden">
-		<div class="modal__content">
-		<div class="col-12 modal__col_img">
-			<div class=" modal__wrap_img">
-				<img class="img_cover" src="img/img_3.jpg" alt="">
+	<div class="dialog-backdrop" onclick="clickBtnClose(this)">
+		<div role="dialog" id="dialog-danz2" aria-labelledby="dialog-danz_label" aria-modal="true" class="modal">
+			<div class="modal__content">
+				<div class="col-12 modal__col_img">
+					<div class=" modal__wrap_img">
+						<img class="img_cover" src="img/img_3.jpg" alt="">
+					</div>
+				</div>
+				<div class="modal_close">
+					<button onclick="closeDialog(this)" class="" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<h3 class="teach__name_modal" id="dialog-danz_label">Слава Красовская</h3>
+				<p>Заслуженный мастер спорта СССР,</p>
+				<p>многократный чемпион Мира,</p>
+				<p>многократный чемпион СССР.</p>
+				<p>Преподаватель Киевской муниципальной академии эстрадного и циркового искусств.</p>
+				<p>Ученики
+					Сергея Петрова — победители и призеры престижных цирковых конкурсов в
+					Париже, Монте-Карло и других фестивалей, а также артисты лучших цирков
+					мира.</p>
 			</div>
 		</div>
-		<div class="modal_close">
-			<button onclick="closeDialog(this)" class="" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			</button>
-		</div>
-		<h3 class="teach__name_modal" id="dialog-danz_label">Слава Красовская</h3>
-		<p>Заслуженный мастер спорта СССР,</p>
-		<p>многократный чемпион Мира,</p>
-		<p>многократный чемпион СССР.</p>
-		<p>Преподаватель Киевской муниципальной академии эстрадного и циркового искусств.</p>
-		<p>Ученики
-			Сергея Петрова — победители и призеры престижных цирковых конкурсов в
-			Париже, Монте-Карло и других фестивалей, а также артисты лучших цирков
-			мира.</p>
-	  </div>
 	</div>
 
 
-
+	<script src="js/vendor.min.js"></script>
 	<script src="js/main.min.js"></script>
 
 
